@@ -1,0 +1,22 @@
+15:00:55 **** Auto Build of configuration Debug for project test1_bsp_xgpio_example_1 ****
+make all 
+'Building file: ../src/xgpio_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_example.o" -I../../test1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xgpio_example.d" -MT"src/xgpio_example.d" -o "src/xgpio_example.o" "../src/xgpio_example.c"
+../src/xgpio_example.c: In function 'main':
+../src/xgpio_example.c:70:33: error: 'XPAR_LEDS_POSITIONS_DEVICE_ID' undeclared (first use in this function)
+ #define GPIO_EXAMPLE_DEVICE_ID  XPAR_LEDS_POSITIONS_DEVICE_ID
+                                 ^
+../src/xgpio_example.c:145:35: note: in expansion of macro 'GPIO_EXAMPLE_DEVICE_ID'
+  Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+                                   ^
+../src/xgpio_example.c:70:33: note: each undeclared identifier is reported only once for each function it appears in
+ #define GPIO_EXAMPLE_DEVICE_ID  XPAR_LEDS_POSITIONS_DEVICE_ID
+                                 ^
+../src/xgpio_example.c:145:35: note: in expansion of macro 'GPIO_EXAMPLE_DEVICE_ID'
+  Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+                                   ^
+make: *** [src/xgpio_example.o] ´íÎó 1
+
+15:00:55 Build Finished (took 351ms)
+

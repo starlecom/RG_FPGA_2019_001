@@ -1,0 +1,98 @@
+
+/*
+ *
+ * www.osrc.cn
+ * www.milinker.com
+ * copyright by nan jin mi lian dian zi www.osrc.cn
+*/
+#if 1
+#include "gpio_dev.h"
+
+static  XGpio xgpio_send_flag;//timer
+static  XGpio xgpio_start_flag;//timer
+static  XGpio xgpio_trig_level;//timer
+static  XGpio xgpio_pretrig;//timer
+static  XGpio xgpio_trig_length;//timer
+static  XGpio xgpio_dds_config;//timer
+static  XGpio xgpio_pulse_period;//timer
+static  XGpio xgpio_pulse_offset;//timer
+static  XGpio xgpio_pulse_width;//timer
+static  XGpio xgpio_src_sel;//timer
+static  XGpio xgpio_datagen_ready;//timer
+static  XGpio xgpio_led;//timer
+static  XGpio xgpio_ch_sel;//timer
+
+int  m_gpio_init(void)
+{
+	int Status;
+//	int i=0;
+	/*
+	 * Initialize the GPIO driver
+	 */
+	Status = XGpio_Initialize(&xgpio_send_flag, 	GPIO_ID_SEND_FLAG);		if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+	Status = XGpio_Initialize(&xgpio_start_flag, 	GPIO_ID_START_FLAG);	if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+	Status = XGpio_Initialize(&xgpio_trig_level, 	GPIO_ID_TRIG_LEVEL);	if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+	Status = XGpio_Initialize(&xgpio_pretrig, 		GPIO_ID_PRETRIG);		if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+	Status = XGpio_Initialize(&xgpio_trig_length, 	GPIO_ID_TRIG_LENGTH);	if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+	Status = XGpio_Initialize(&xgpio_dds_config, 	GPIO_ID_DDS_CONFIG);	if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+	Status = XGpio_Initialize(&xgpio_pulse_period, 	GPIO_ID_PULSE_PERIOD);	if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+	Status = XGpio_Initialize(&xgpio_pulse_offset, 	GPIO_ID_PULSE_OFFSET);	if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+	Status = XGpio_Initialize(&xgpio_pulse_width, 	GPIO_ID_PULSE_WIDTH);	if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+	Status = XGpio_Initialize(&xgpio_src_sel, 		GPIO_ID_SRC_SEL);		if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+	Status = XGpio_Initialize(&xgpio_datagen_ready, GPIO_ID_DATAGEN_READY);	if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+	Status = XGpio_Initialize(&xgpio_led, 			GPIO_ID_LED);			if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+	Status = XGpio_Initialize(&xgpio_ch_sel, 		GPIO_ID_CH_SEL);		if (Status != XST_SUCCESS) {return XST_FAILURE;	}
+
+	XGpio_SetDataDirection(&xgpio_send_flag, 	1, 	GPIO_DIR_INPUT);
+	XGpio_SetDataDirection(&xgpio_start_flag, 	1, 	GPIO_DIR_OUTPUT);
+	XGpio_SetDataDirection(&xgpio_trig_level, 	1, 	GPIO_DIR_OUTPUT);
+	XGpio_SetDataDirection(&xgpio_pretrig, 		1, 	GPIO_DIR_OUTPUT);
+	XGpio_SetDataDirection(&xgpio_trig_length, 	1, 	GPIO_DIR_OUTPUT);
+	XGpio_SetDataDirection(&xgpio_dds_config, 	1, 	GPIO_DIR_OUTPUT);
+	XGpio_SetDataDirection(&xgpio_pulse_period, 1, 	GPIO_DIR_OUTPUT);
+	XGpio_SetDataDirection(&xgpio_pulse_offset, 1, 	GPIO_DIR_OUTPUT);
+	XGpio_SetDataDirection(&xgpio_pulse_width, 	1, 	GPIO_DIR_OUTPUT);
+	XGpio_SetDataDirection(&xgpio_src_sel, 		1, 	GPIO_DIR_OUTPUT);
+	XGpio_SetDataDirection(&xgpio_datagen_ready,1, 	GPIO_DIR_OUTPUT);
+	XGpio_SetDataDirection(&xgpio_led,			1, 	GPIO_DIR_OUTPUT);
+	XGpio_SetDataDirection(&xgpio_ch_sel,		1, 	GPIO_DIR_OUTPUT);
+
+	gpio_set_trig_level		(20000);         //触发电平
+	gpio_set_pretrig		(100);          //预触发
+	gpio_set_trig_length	(1000);			//触发深度1000,暂时不能更改
+	gpio_set_dds_config		(26843546);     //信号源配置
+	gpio_set_pulse_period	(20000);        //脉冲周期
+	gpio_set_pulse_offset	(0);            //脉冲偏置
+	gpio_set_pulse_width	(20000);        //脉冲宽度
+	gpio_set_src_sel		(1);            //信号源选择
+	gpio_set_led			(0x00);
+	gpio_set_ch_sel			(0x04);			//选择第三通道
+
+	gpio_set_datagen_ready(1);
+	gpio_set_start_flag(1);
+//	for(i=0;i<100;i++);
+//	gpio_set_start_flag(0);
+
+	return 0;
+	
+}
+void gpio_set_start_flag	(u16 dat){	XGpio_DiscreteWrite(&xgpio_start_flag, 	1, dat&0x01);	}
+void gpio_set_trig_level	(u16 dat){	XGpio_DiscreteWrite(&xgpio_trig_level, 	1, dat);	}
+void gpio_set_pretrig		(u16 dat){	XGpio_DiscreteWrite(&xgpio_pretrig, 	1, dat);	}
+void gpio_set_trig_length	(u16 dat){	XGpio_DiscreteWrite(&xgpio_trig_length, 1, dat);	}
+void gpio_set_dds_config	(u32 dat){	XGpio_DiscreteWrite(&xgpio_dds_config, 	1, dat);	}
+void gpio_set_pulse_period	(u16 dat){	XGpio_DiscreteWrite(&xgpio_pulse_period, 	1, dat);	}
+void gpio_set_pulse_offset	(u16 dat){	XGpio_DiscreteWrite(&xgpio_pulse_offset, 	1, dat);	}
+void gpio_set_pulse_width	(u16 dat){	XGpio_DiscreteWrite(&xgpio_pulse_width, 	1, dat);	}
+void gpio_set_src_sel		(u16 dat){	XGpio_DiscreteWrite(&xgpio_src_sel, 	1, dat&0x01);	}
+void gpio_set_datagen_ready	(u16 dat){	XGpio_DiscreteWrite(&xgpio_datagen_ready, 	1, dat&0x01);	}
+void gpio_set_led			(u16 dat){	XGpio_DiscreteWrite(&xgpio_led, 	1, dat&0x0f);	}
+void gpio_set_ch_sel		(u16 dat){	XGpio_DiscreteWrite(&xgpio_ch_sel, 	1, dat&0x0f);	}
+
+u8 m_gpio_get(void)
+{
+	u32 result=XGpio_DiscreteRead(&xgpio_send_flag, 1);
+	return (u8)(result&0x01);
+}
+
+#endif

@@ -1,0 +1,7 @@
+the_ROM_image:
+{
+	[bootloader]F:\Project\RG-2018-YF-001\FPGA\YF-012-V2.2-FPGA\YF-012-V1.0-FPGA\YF-012-V1.0-FPGA.sdk\amp_fsbl\Debug\amp_fsbl.elf
+	F:\Project\RG-2018-YF-001\FPGA\YF-012-V2.2-FPGA\YF-012-V1.0-FPGA\YF-012-V1.0-FPGA.sdk\design_ps_wrapper_hw_platform_0\design_ps_wrapper.bit
+	F:\Project\RG-2018-YF-001\FPGA\YF-012-V2.2-FPGA\YF-012-V1.0-FPGA\YF-012-V1.0-FPGA.sdk\project_pd\Debug\project_pd.elf
+	F:\Project\RG-2018-YF-001\FPGA\YF-012-V2.2-FPGA\YF-012-V1.0-FPGA\YF-012-V1.0-FPGA.sdk\app_cpu1\Debug\app_cpu1.elf
+}

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Fri Aug 24 09:42:02 2018
+# Process ID: 11492
+# Current directory: F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.runs/synth_1
+# Command line: vivado.exe -log design_ps_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source design_ps_wrapper.tcl
+# Log file: F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.runs/synth_1/design_ps_wrapper.vds
+# Journal file: F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_ps_wrapper.tcl -notrace

@@ -1,0 +1,31 @@
+09:22:34 **** Build of configuration Debug for project standalone_bsp_0_xaxidma_example_simple_intr_1 ****
+make all 
+'Building file: ../src/xaxidma_example_simple_intr.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xaxidma_example_simple_intr.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xaxidma_example_simple_intr.d" -MT"src/xaxidma_example_simple_intr.d" -o "src/xaxidma_example_simple_intr.o" "../src/xaxidma_example_simple_intr.c"
+../src/xaxidma_example_simple_intr.c:123:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^
+../src/xaxidma_example_simple_intr.c: In function 'main':
+../src/xaxidma_example_simple_intr.c:135:21: error: 'XPAR_FABRIC_AXIDMA_0_MM2S_INTROUT_VEC_ID' undeclared (first use in this function)
+ #define TX_INTR_ID  XPAR_FABRIC_AXIDMA_0_MM2S_INTROUT_VEC_ID
+                     ^
+../src/xaxidma_example_simple_intr.c:289:43: note: in expansion of macro 'TX_INTR_ID'
+  Status = SetupIntrSystem(&Intc, &AxiDma, TX_INTR_ID, RX_INTR_ID);
+                                           ^
+../src/xaxidma_example_simple_intr.c:135:21: note: each undeclared identifier is reported only once for each function it appears in
+ #define TX_INTR_ID  XPAR_FABRIC_AXIDMA_0_MM2S_INTROUT_VEC_ID
+                     ^
+../src/xaxidma_example_simple_intr.c:289:43: note: in expansion of macro 'TX_INTR_ID'
+  Status = SetupIntrSystem(&Intc, &AxiDma, TX_INTR_ID, RX_INTR_ID);
+                                           ^
+../src/xaxidma_example_simple_intr.c:134:21: error: 'XPAR_FABRIC_AXIDMA_0_S2MM_INTROUT_VEC_ID' undeclared (first use in this function)
+ #define RX_INTR_ID  XPAR_FABRIC_AXIDMA_0_S2MM_INTROUT_VEC_ID
+                     ^
+../src/xaxidma_example_simple_intr.c:289:55: note: in expansion of macro 'RX_INTR_ID'
+  Status = SetupIntrSystem(&Intc, &AxiDma, TX_INTR_ID, RX_INTR_ID);
+                                                       ^
+make: *** [src/xaxidma_example_simple_intr.o] ´íÎó 1
+
+09:22:35 Build Finished (took 1s.893ms)
+

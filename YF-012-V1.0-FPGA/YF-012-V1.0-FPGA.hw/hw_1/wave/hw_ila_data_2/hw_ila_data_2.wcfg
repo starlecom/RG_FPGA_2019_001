@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.0-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="4600001fs"></ZoomEndTime>
+      <Cursor1Time time="1105000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="3" />
+   <wave_markers>
+      <marker time="0" label="" />
+   </wave_markers>
+   <wvobject db_ref_id="1" fp_name="design_ps_i/Timer_10us_m_0_timer_10us_o" type="logic">
+      <obj_property name="ElementShortName">design_ps_i/Timer_10us_m_0_timer_10us_o</obj_property>
+      <obj_property name="ObjectShortName">design_ps_i/Timer_10us_m_0_timer_10us_o</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig" type="array">
+      <obj_property name="ElementShortName">design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[15:0]</obj_property>
+      <obj_property name="ObjectShortName">design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig" type="array">
+      <obj_property name="ElementShortName">design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[15:0]</obj_property>
+      <obj_property name="ObjectShortName">design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+</wave_config>

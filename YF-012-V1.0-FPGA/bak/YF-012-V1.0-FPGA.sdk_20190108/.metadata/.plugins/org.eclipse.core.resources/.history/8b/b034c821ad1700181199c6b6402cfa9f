@@ -1,0 +1,442 @@
+
+/*
+ *
+ * www.osrc.cn
+ * www.milinker.com
+ * copyright by nan jin mi lian dian zi www.osrc.cn
+*/
+#include "lwip_mod.h"
+
+
+#define REC_BUF_SIZE 64
+
+struct netif *netif, server_netif;
+static struct tcp_pcb *connected_pcb=NULL;
+volatile unsigned tcp_client_connected=0;
+static int tcp_trans_done=0;
+int tcp_recv_cnt=0;
+int packet_trans_done=0;
+u8 dma_trans_flag=1;
+u8 first_packet_flag=1;
+u8 syn_mode_flag=0;
+extern u16 *RxBufferPtr[1];  /* ping pong buffers*/
+static u8 lwip_rec_buf[REC_BUF_SIZE];
+static u8 tcp_recv_flag=0;
+
+static u8 receive_buf1[SEND_SIZE*DMA_REC_SIZE];
+static u8 receive_buf2[SEND_SIZE*DMA_REC_SIZE];
+static u16 rec_buf1_cnt=0;
+static u16 rec_buf2_cnt=0;
+static u8 switch_rec_flag=0;
+static u8 rec_flag1=0;
+static u8 rec_flag2=0;
+static u16 send_cnt1 = 0;
+static u16 send_cnt2 = 0;
+static u16 tcp_trans_size = DMA_REC_SIZE;
+
+void update_trans_size(u16 size)
+{
+	if(size > DMA_REC_SIZE)
+		size = DMA_REC_SIZE;
+	else if(size <= 5)
+		size = 5;
+	tcp_trans_size = size;
+}
+void clr_rec_cnt(void)
+{
+	switch_rec_flag = 0;
+	rec_flag1 = 0;
+	rec_flag2 = 0;
+	send_cnt1 = 0;
+	send_cnt2 = 0;
+	rec_buf1_cnt = 0;
+	rec_buf2_cnt = 0;
+	memset(receive_buf1,0,SEND_SIZE*DMA_REC_SIZE);
+	memset(receive_buf2,0,SEND_SIZE*DMA_REC_SIZE);
+//	if(rec_flag1)
+//	{
+//		send_cnt1 = 0;
+//		memset(receive_buf1,0,SEND_SIZE*DMA_REC_SIZE);
+//	}
+//	else if(rec_flag2)
+//	{
+//		send_cnt2 = 0;
+//		memset(receive_buf2,0,SEND_SIZE*DMA_REC_SIZE);
+//	}
+}
+
+void reset_rec_data(void)
+{
+	memset(receive_buf1,0,SEND_SIZE*DMA_REC_SIZE);
+	memset(receive_buf2,0,SEND_SIZE*DMA_REC_SIZE);
+	rec_buf1_cnt = 0;
+	rec_buf2_cnt = 0;
+	switch_rec_flag = 0;
+	rec_flag1 = 0;
+	rec_flag2 = 0;
+	send_cnt1 = 0;
+	send_cnt2 = 0;
+	rec_buf1_cnt = 0;
+	rec_buf2_cnt = 0;
+}
+
+void TcpRecv(void)
+{
+	int i = 0;
+	u16 data16 = 0;
+	u8  data8 = 0;
+	u8 keyword = 0;
+	u8 data[3];
+	if(tcp_recv_flag > 0)
+	{
+		tcp_recv_flag = 0;
+		if((lwip_rec_buf[0]==0xa8)&&(lwip_rec_buf[1]==0x8a)&&(lwip_rec_buf[7]==0x78))
+		{
+			//Ω‚Œˆ√¸¡Ó
+			data16  = (lwip_rec_buf[4]<<8)|lwip_rec_buf[3];
+			data8   = lwip_rec_buf[3];
+			keyword = lwip_rec_buf[2];
+			data[0]   = lwip_rec_buf[3];    //syn_mode
+			data[1]   = lwip_rec_buf[4];    //fre
+			data[2]   = lwip_rec_buf[5];
+			memset(lwip_rec_buf,0,8);
+			switch(keyword)
+			{
+				case 0x01:
+					gpio_set_start_flag(1);
+					for(i=0;i<100;i++);
+					gpio_set_start_flag(0);
+		//			gpio_set_datagen_ready(1);
+					break;
+				case 0x02:
+					gpio_set_trig_level(data16);
+					xil_printf("trig_level=%d\n\r",data16);
+					break;
+				case 0x03:
+					gpio_set_pretrig(data16);
+					xil_printf("pretrig=%d\n\r",data16);
+					break;
+				case 0x04:
+					gpio_set_trig_length(data16);
+					xil_printf("trig_length=%d\n\r",data16);
+					break;
+				case 0x05:
+					gpio_set_pulse_period(data16);
+					xil_printf("pulse_period=%d\n\r",data16);
+					break;
+				case 0x06:
+					gpio_set_pulse_offset(data16);
+					xil_printf("pulse_offset=%d\n\r",data16);
+					break;
+				case 0x07:
+					gpio_set_pulse_width(data16);
+					xil_printf("pulse_width=%d\n\r",data16);
+					break;
+				case 0x08:
+					gpio_set_src_sel(data8);
+					xil_printf("src_sel=%d\n\r",data8);
+					break;
+				case 0x09:
+					gpio_set_chs(data8);
+					gpio_set_ch_sel(data8);
+					xil_printf("ch_sel=%d\n\r",data8);
+					break;
+				case 0x0A:
+					change_mode(data8);
+					xil_printf("storage_mode=%d\n\r",data8);
+					break;
+				case 0x0B:
+					put_data_to_region(data,data_to_cpu1,3,region_cpu0);
+					syn_mode_flag = 1;//send syn mode and frequency
+					xil_printf("syn_mode=%d\n\r",data8);
+					break;
+				case 0x0C:
+					qspi_write(ADJUSTED_VALUE_ADDR,data16);
+					for(i =0;i<1000000;i++);
+					para_update();
+					xil_printf("adjusted_value=%d\n\r",data16);
+					break;
+				default:break;
+			}
+		}
+	}
+}
+
+static err_t tcp_sent_callback(void *arg, struct tcp_pcb *tpcb, u16_t len)
+{
+	tcp_trans_done ++;
+	return ERR_OK;
+}
+
+static err_t tcp_recv_callback(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err)
+{
+	memset(lwip_rec_buf,0,8);
+	/* do not read the packet if we are not in ESTABLISHED state */
+	if (!p)
+	{
+		tcp_close(tpcb);
+		tcp_recv(tpcb, NULL);
+		return ERR_OK;
+	}
+
+	/* indicate that the packet has been received */
+	tcp_recved(tpcb, p->len);
+
+	if(p != NULL)
+	{
+		memcpy(lwip_rec_buf,(u8*)(p->payload),p->len);
+		tcp_recv_flag = 1;
+		//xil_printf("\nrecv_len=%d\n\r",p->len);
+	}
+
+	/* free the received pbuf */
+	pbuf_free(p);
+	return ERR_OK;
+}
+
+static err_t tcp_connected_callback(void *arg, struct tcp_pcb *tpcb, err_t err)
+{
+	xil_printf("txperf: Connected to iperf server\r\n");
+	/* store state */
+	connected_pcb = tpcb;
+	/* set callback values & functions */
+	tcp_arg(tpcb, NULL);
+	tcp_sent(tpcb, tcp_sent_callback);
+	tcp_recv(tpcb, tcp_recv_callback);
+	tcp_client_connected = 1;
+	/* initiate data transfer */
+	return ERR_OK;
+}
+
+void m_tcp_tmr(void)
+{
+	tcp_tmr();
+}
+
+void DmaReceive(void)
+{
+	int Status;
+
+	if(first_packet_flag)
+	{
+		first_packet_flag=0;
+		Status = XAxiDma_SimpleTransfer(&AxiDma, (u32)RxBufferPtr[0],(u32)(PAKET_LENGTH), XAXIDMA_DEVICE_TO_DMA);
+
+		if (Status != XST_SUCCESS)
+		{
+			xil_printf("axi dma failed! %d \r\n", Status);
+			return;
+		}
+		else
+			xil_printf("axi dma trans ok! \r\n");
+
+		return;
+	}
+
+	/*if the last axidma transmission is done, the interrupt triggered, then start TCP transmission*/
+	if(packet_trans_done)
+	{
+		if((switch_rec_flag)&&(!send_cnt1))
+		{
+			if(rec_buf1_cnt < tcp_trans_size)
+			{
+				rec_flag1 = 0;
+				memcpy((receive_buf1+rec_buf1_cnt*SEND_SIZE),RxBufferPtr[0],SEND_SIZE);
+				receive_buf1[rec_buf1_cnt*SEND_SIZE+10] = syn_data[0];
+				receive_buf1[rec_buf1_cnt*SEND_SIZE+11] = syn_data[1];
+				receive_buf1[rec_buf1_cnt*SEND_SIZE+12] = (u8) rec_buf1_cnt;
+				receive_buf1[rec_buf1_cnt*SEND_SIZE+13] = (u8) (rec_buf1_cnt>>8);
+				receive_buf1[rec_buf1_cnt*SEND_SIZE+14] = syn_data[2];
+				receive_buf1[rec_buf1_cnt*SEND_SIZE+15] = syn_data[3];
+				receive_buf1[rec_buf1_cnt*SEND_SIZE+17] = get_ch_state();
+				receive_buf1[rec_buf1_cnt*SEND_SIZE+18] = get_mode_now();
+				receive_buf1[rec_buf1_cnt*SEND_SIZE+20] = syn_data[4];
+				receive_buf1[rec_buf1_cnt*SEND_SIZE+21] = syn_data[5];
+				rec_buf1_cnt++;
+			}
+			else
+			{
+				switch_rec_flag = 0;
+				rec_buf1_cnt = 0;
+				rec_flag1 = 1;
+			}
+		}
+		else if(!send_cnt2)
+		{
+			if(rec_buf2_cnt < tcp_trans_size)
+			{
+				rec_flag2 = 0;
+				memcpy((receive_buf2+rec_buf2_cnt*SEND_SIZE),RxBufferPtr[0],SEND_SIZE);
+				//phase_tmp = GetPhasePos();
+				receive_buf2[rec_buf2_cnt*SEND_SIZE+10] = syn_data[0];
+				receive_buf2[rec_buf2_cnt*SEND_SIZE+11] = syn_data[1];
+				receive_buf2[rec_buf2_cnt*SEND_SIZE+12] = (u8) rec_buf2_cnt;
+				receive_buf2[rec_buf2_cnt*SEND_SIZE+13] = (u8) (rec_buf2_cnt>>8);
+				receive_buf2[rec_buf2_cnt*SEND_SIZE+14] = syn_data[2];
+				receive_buf2[rec_buf2_cnt*SEND_SIZE+15] = syn_data[3];
+				receive_buf2[rec_buf2_cnt*SEND_SIZE+17] = get_ch_state();
+				receive_buf2[rec_buf2_cnt*SEND_SIZE+18] = get_mode_now();
+				receive_buf2[rec_buf2_cnt*SEND_SIZE+20] = syn_data[4];
+				receive_buf2[rec_buf2_cnt*SEND_SIZE+21] = syn_data[5];
+				rec_buf2_cnt++;
+			}
+			else
+			{
+				switch_rec_flag = 1;
+				rec_buf2_cnt = 0;
+				rec_flag2 = 1;
+			}
+		}
+		dma_trans_flag = 0;
+		packet_trans_done = 0;
+
+		Status = XAxiDma_SimpleTransfer(&AxiDma, (u32)RxBufferPtr[0],(u32)(PAKET_LENGTH), XAXIDMA_DEVICE_TO_DMA);
+
+		if (Status != XST_SUCCESS)
+		{
+			xil_printf("axi dma failed! %d \r\n", Status);
+			return;
+		}
+//		else
+//			xil_printf("axi dma trans ok! \r\n");
+	}
+}
+
+void send_received_data()
+{
+	#if __arm__
+		int copy = 3;
+	#else
+		int copy = 0;
+	#endif
+	err_t err;
+	struct tcp_pcb *tpcb = connected_pcb;
+	if (!connected_pcb)
+		return;
+	/* if tcp send buffer has enough space to hold the data we want to transmit from PL, then start tcp transmission*/
+	if (tcp_sndbuf(tpcb) > SEND_SIZE)
+	{
+		if((rec_flag1)&&(!send_cnt2))
+		{
+			if(send_cnt1 < tcp_trans_size)
+			{
+				/*transmit received data through TCP*/
+				err = tcp_write(tpcb, (receive_buf1+send_cnt1*SEND_SIZE), SEND_SIZE, copy);
+				//err = tcp_write(tpcb, RxBufferPtr[0], SEND_SIZE, copy);
+				if (err != ERR_OK)
+				{
+					xil_printf("txperf: Error on tcp_write: %d\r\n", err);
+					connected_pcb = NULL;
+					tcp_client_connected= 0;
+					return;
+				}
+				err = tcp_output(tpcb);
+				send_cnt1++;
+				if (err != ERR_OK)
+				{
+					xil_printf("txperf: Error on tcp_output: %d\r\n",err);
+					return;
+				}
+			}
+			else
+			{
+				send_cnt1  = 0;
+				rec_flag1 = 0;
+			}
+		}
+		else if((rec_flag2)&&(!send_cnt1))
+		{
+			if(send_cnt2 < tcp_trans_size)
+			{
+			/*transmit received data through TCP*/
+				err = tcp_write(tpcb, (receive_buf2+send_cnt2*SEND_SIZE), SEND_SIZE, copy);
+				//err = tcp_write(tpcb, RxBufferPtr[0], SEND_SIZE, copy);
+				if (err != ERR_OK)
+				{
+					xil_printf("txperf: Error on tcp_write: %d\r\n", err);
+					connected_pcb = NULL;
+					tcp_client_connected= 0;
+					return;
+				}
+				err = tcp_output(tpcb);
+				send_cnt2++;
+				if (err != ERR_OK)
+				{
+					xil_printf("txperf: Error on tcp_output: %d\r\n",err);
+					return;
+				}
+			}
+			else
+			{
+				send_cnt2  = 0;
+				rec_flag2 = 0;
+			}
+		}
+	}
+}
+
+int tcp_send_init(void)
+{
+	struct tcp_pcb *pcb;
+	struct ip_addr ipaddr;
+	err_t err;
+	u16_t port;
+
+	pcb=tcp_new();
+	if(!pcb)
+	{
+		xil_printf("txperf:Error creating PCB.Out of Memory\r\n");
+		return -1;
+	}
+
+	IP4_ADDR(&ipaddr,192,168,0,101);
+
+	port=7;
+
+	tcp_client_connected=0;
+
+	packet_trans_done=0;
+//	packet_index=0;
+
+	err=tcp_connect(pcb,&ipaddr,port,tcp_connected_callback);
+	if(err!=ERR_OK)
+	{
+		xil_printf("txperf:tcp_connect return error!%d\r\n",err);
+		return err;
+	}
+	return 0;
+}
+
+
+
+void lwip_setup(void)
+{
+
+	struct ip_addr ipaddr, netmask, gw;
+	/* the mac address of the board. this should be unique per board */
+	unsigned char mac_ethernet_address[] = { 0x00, 0x0a, 0x35, 0x00, 0x01, 0x02 };
+	
+	netif = &server_netif;
+	IP4_ADDR(&ipaddr,  192, 168,   0,  10);
+	IP4_ADDR(&netmask, 255, 255, 255,  0);
+	IP4_ADDR(&gw,      192, 168,   0,  1);
+	/*lwip library init*/
+	lwip_init();
+
+	/* Add network interface to the netif_list, and set it as default */
+	if (!xemac_add(netif, &ipaddr, &netmask, &gw, mac_ethernet_address, XPAR_XEMACPS_0_BASEADDR))
+	{
+		xil_printf("Error adding N/W interface\r\n");
+		return ;
+	}
+	netif_set_default(netif);
+	/* specify that the network if is up */
+	netif_set_up(netif);
+	/* initialize tcp pcb */
+	tcp_send_init();
+
+}
+
+
+
+

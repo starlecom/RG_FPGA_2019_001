@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Default C source template" key="LastUsedSourceTemplate"/>
+	<item value="Default C header template" key="LastUsedHeaderTemplate"/>
+	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
+		<item value="398" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="490" key="DIALOG_HEIGHT"/>
+		<item value="769" key="DIALOG_X_ORIGIN"/>
+		<item value="202" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.text.QuickOutline">
+		<item value="true" key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_USE_PERSISTED_SIZE"/>
+		<item value="434" key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_Y_ORIGIN"/>
+		<item value="350" key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_WIDTH"/>
+		<item value="true" key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_USE_PERSISTED_LOCATION"/>
+		<item value="300" key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_HEIGHT"/>
+		<item value="916" key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_X_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item value="180" key="size.height"/>
+		<item value="384" key="size.width"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="PDOMSearchPage">
+		<item value="false" key="caseSensitive"/>
+		<item value="227191" key="searchFlags"/>
+		<list key="previousPatterns">
+			<item value="tcp_tmr"/>
+			<item value="tmr_10s_flag"/>
+			<item value="ctreturnerror"/>
+			<item value="clr_rec_cnt"/>
+			<item value="gpio_set_adjusted_value"/>
+			<item value="adjust"/>
+			<item value="ADJUSTED_ADDR"/>
+			<item value="send_flag"/>
+			<item value="switch_rec_flag"/>
+			<item value="dma_cnt"/>
+			<item value="zero_adjust"/>
+			<item value="tmr_sample_flag"/>
+			<item value="sample_time"/>
+			<item value="1000"/>
+			<item value="gpio_set_chs"/>
+			<item value="send_period"/>
+			<item value="tmr_send_flag"/>
+			<item value="DMA_REC_SIZE"/>
+			<item value="SAMPLE_SIZE"/>
+			<item value="tcp_trans_size"/>
+			<item value="syn_data"/>
+			<item value="sample_quantity"/>
+			<item value="connected_pcb"/>
+			<item value="RX_ready"/>
+			<item value="rec_flag1"/>
+			<item value="update_trans_size"/>
+			<item value="tcp_send_init"/>
+			<item value="tmr_2s_flag_cnt"/>
+			<item value="tmr_1s_flag"/>
+			<item value="syn_process"/>
+			<item value="syn_success_flag"/>
+			<item value="SYN_PERIOD"/>
+			<item value="data_save_flag"/>
+			<item value="xil_printf"/>
+			<item value="syn_mode_flag"/>
+			<item value="reset_rec_data"/>
+			<item value="GetPhasePos"/>
+			<item value="set_syn_i_del"/>
+			<item value="get_mode_now"/>
+			<item value="update_flag"/>
+			<item value="phase_pos"/>
+			<item value="XADCPS_SEQ_CH__"/>
+			<item value="syn_cnt"/>
+			<item value="XPS_GLOBAL_TMR_INT_ID"/>
+			<item value="XScuGic_DeviceInterruptHandler"/>
+			<item value="Xil_Out16"/>
+			<item value="Xil_In16"/>
+			<item value="XGpio_Out"/>
+			<item value="gpio_set_led"/>
+			<item value="Autonegotiationerror"/>
+			<item value="first_packet_flag"/>
+			<item value="syn_flag"/>
+			<item value="arg"/>
+			<item value="vau"/>
+			<item value="lasttransmissionhasnotfinished"/>
+			<item value="last"/>
+			<item value="axidmatransok"/>
+			<item value="packet_index"/>
+			<item value="dma_trans_flag"/>
+			<item value="PAKET_LENGTH"/>
+			<item value="RxBufferPtr"/>
+			<item value="tcp_recv_callback"/>
+			<item value="axi*dma*"/>
+			<item value="RX_BUFFER_BASE"/>
+			<item value="RX_BUFFER0_BASE"/>
+			<item value="tcp_connected_callback"/>
+			<item value="tcp_client_connected"/>
+			<item value="SEND_SIZE"/>
+			<item value="packet_trans_done"/>
+			<item value="MAX_PKT_LEN"/>
+		</list>
+	</section>
+	<section name="NewClassWizardPage">
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+</section>

@@ -1,0 +1,197 @@
+/*
+ *
+ * www.osrc.cn
+ * www.milinker.com
+ * copyright by nan jin mi lian dian zi www.osrc.cn
+*/
+
+#include "timer_intr.h"
+
+int TcpTmrFlag=0;
+int tmr_cnt=0;
+int tmr_2ms7_cnt=0;
+u32 tmr_2s_flag_cnt=0;
+u32 tmr_2s_flag=0;
+u32 tmr_2ms7_flag=0;
+int syn_flag=0;   //同步标志
+u32 syn_cnt=0;
+u32 lf_data[LF_DATA_SIZE];
+u16 peak_cnt1=0;
+u32 lf_peak_tmp = 0;
+
+static u16 phase_pos=1000; //相位
+static int syn_success_flag=0;
+static u16 peak_cnt2=0;
+static u32 lf_peak=0;
+//static int led = 0;
+u32 phase_buf[21];//测试相位
+
+
+u16 GetPhasePos(void)
+{
+	return phase_pos;
+}
+
+u32 FindMax(u32 *arr)
+{
+    u32 max = 0;
+    u32 min = 0;
+    int i = 0,j = 0;
+    max = MAX(arr[0], arr[1]);
+    min = MIN(arr[0], arr[1]);
+
+    for(i = 0, j = i+1; (i != LF_DATA_SIZE) && (j != LF_DATA_SIZE); ++i, ++j)
+    {
+
+        if(max < MAX(arr[i], arr[j]))
+        {
+            max = MAX(arr[i], arr[j]);
+        }
+        if(min > MIN(arr[i], arr[j]))
+        {
+            min = MIN(arr[i], arr[j]);
+        }
+    }
+    if(max <= (min + 10))
+    {
+    	max = 0xffff;
+    }
+    return max;
+}
+
+static void TimerIntrHandler(void *CallBackRef)
+{
+	static u16 i;
+	//static u32 cnt=0;
+    XScuTimer *TimerInstancePtr = (XScuTimer *) CallBackRef;
+    XScuTimer_ClearInterruptStatus(TimerInstancePtr);
+    /***********************同步***************************/
+	syn_cnt++;
+	if(syn_cnt > SYN_PERIOD)
+	{
+		syn_cnt  = 0;
+		syn_flag = 0;
+	}
+
+    if(syn_flag == 0)          //采集两周期波形，转到main。c 寻找峰值
+    {
+    	phase_pos  = 1000;
+    	lf_data[i] = xadc_read_vaux3();
+    	i++;
+    	if(i >= LF_DATA_SIZE)
+    	{
+    		i        = 0;
+    		syn_flag = 1;
+    	}
+    }
+
+    if(syn_flag == 2)         //验证峰值
+    {
+	   if(syn_cnt == (peak_cnt1 + 720))
+	   {
+	   		lf_peak = xadc_read_vaux3();
+	   		if((lf_peak >= (lf_peak_tmp - 5)) && (lf_peak <= (lf_peak_tmp + 5)))
+	   		{
+	   			peak_cnt2 = syn_cnt;
+	   			if(1)//if((peak_cnt2 >= (peak_cnt1 + 717)) && (peak_cnt2 <= (peak_cnt1 + 723)))
+	   			{
+	   				//xil_printf("peak_cnt2=%d\n\r",peak_cnt2);
+	   				//xil_printf("lf_peak=%d\n\r",lf_peak);
+	   				syn_success_flag = 1;
+	   				phase_pos        = 180;
+					syn_cnt          = 0;
+					syn_flag         = 10;
+	   			}
+	   	    }
+	   		else
+	   		{
+	   			syn_flag = 0;
+	   			syn_cnt  = 0;
+	   		}
+	   }
+    }
+
+
+    if(syn_success_flag)
+    {
+    	phase_pos++;
+    	/*验证相位正确性*/
+    	/*if(phase_pos==180)
+    	{
+    		if(cnt<20)
+    		{
+    			phase_buf[cnt] = xadc_read_vaux3();
+    			cnt++;
+    		}
+    		else
+    		{
+    			phase_buf[20] = 1;
+    		}
+    	}*/
+    	if(phase_pos >= 720)
+    	{
+    		phase_pos = 0;
+    	}
+    }
+
+
+	if (tmr_2s_flag_cnt < TIMER_2S)
+	{
+		tmr_2s_flag_cnt++;
+	}
+	else
+	{
+		tmr_2s_flag_cnt = TIMER_2S;
+		tmr_2s_flag     = 1;
+	}
+
+    if (tmr_cnt < TIMER_250MS)
+    {
+    	tmr_cnt++;
+    }
+    else
+    {
+    	tmr_cnt = 0;
+    	TcpTmrFlag++;
+    }
+
+    if (tmr_2ms7_cnt < TIMER_2MS7)
+    {
+    	tmr_2ms7_cnt++;
+    }
+    else
+    {
+    	tmr_2ms7_cnt = 0;
+    	tmr_2ms7_flag++;
+    }
+}
+
+void Timer_start(XScuTimer *TimerPtr)
+{
+	    XScuTimer_Start(TimerPtr);
+}
+
+void Timer_Setup_Intr_System(XScuGic *GicInstancePtr,XScuTimer *TimerInstancePtr, u16 TimerIntrId)
+{
+        XScuGic_Connect(GicInstancePtr, TimerIntrId,
+                        (Xil_ExceptionHandler)TimerIntrHandler,//set up the timer interrupt
+                        (void *)TimerInstancePtr);
+
+        XScuGic_Enable(GicInstancePtr, TimerIntrId);//enable the interrupt for the Timer at GIC
+        XScuTimer_EnableInterrupt(TimerInstancePtr);//enable interrupt on the timer
+ }
+
+int Timer_init(XScuTimer *TimerPtr,u32 Load_Value,u32 DeviceId)
+{
+     XScuTimer_Config *TMRConfigPtr;     //timer config
+     //私有定时器初始化
+     TMRConfigPtr = XScuTimer_LookupConfig(DeviceId);
+     XScuTimer_CfgInitialize(TimerPtr, TMRConfigPtr,TMRConfigPtr->BaseAddr);
+     //XScuTimer_SelfTest(&Timer);
+     //加载计数周期，私有定时器的时钟为CPU的一半，为333MHZ,如果计数1S,加载值为1sx(333x1000x1000)(1/s)-1=0x13D92D3F
+     XScuTimer_LoadTimer(TimerPtr, Load_Value);//F8F00600+0=reg=F8F00600
+     //自动装载
+     XScuTimer_EnableAutoReload(TimerPtr);//F8F00600+8=reg=F8F00608
+
+     return 1;
+}

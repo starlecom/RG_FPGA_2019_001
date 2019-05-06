@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# 
+# Start of session at: Thu Aug 23 13:05:19 2018
+# Process ID: 9452
+# Current directory: F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.sdk/webtalk/webtalk.log
+# Journal file: F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

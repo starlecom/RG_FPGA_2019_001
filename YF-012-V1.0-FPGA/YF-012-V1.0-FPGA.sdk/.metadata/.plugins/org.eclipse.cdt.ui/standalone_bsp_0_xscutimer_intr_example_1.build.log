@@ -1,0 +1,21 @@
+11:24:27 **** Build of configuration Debug for project standalone_bsp_0_xscutimer_intr_example_1 ****
+make all 
+'Building file: ../src/xscutimer_intr_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xscutimer_intr_example.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/xscutimer_intr_example.d" -MT"src/xscutimer_intr_example.d" -o "src/xscutimer_intr_example.o" "../src/xscutimer_intr_example.c"
+'Finished building: ../src/xscutimer_intr_example.c'
+' '
+'Building target: standalone_bsp_0_xscutimer_intr_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "standalone_bsp_0_xscutimer_intr_example_1.elf"  ./src/xscutimer_intr_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+'Finished building target: standalone_bsp_0_xscutimer_intr_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size standalone_bsp_0_xscutimer_intr_example_1.elf  |tee "standalone_bsp_0_xscutimer_intr_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27276	   1936	  22612	  51824	   ca70	standalone_bsp_0_xscutimer_intr_example_1.elf
+'Finished building: standalone_bsp_0_xscutimer_intr_example_1.elf.size'
+' '
+
+11:24:28 Build Finished (took 1s.107ms)
+

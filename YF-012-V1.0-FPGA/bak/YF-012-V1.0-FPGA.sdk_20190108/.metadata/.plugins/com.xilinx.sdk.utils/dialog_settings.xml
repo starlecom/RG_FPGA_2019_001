@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="F:\Project\RG-2018-YF-001\FPGA\YF-012-V2.1-FPGA\YF-012-V1.0-FPGA\YF-012-V1.0-FPGA.sdk\project_pd\bootimg" key="bootgen_files_selection"/>
+	<item value="F:\Project\RG-2018-YF-001\FPGA\YF-012-V2.1-FPGA\YF-012-V1.0-FPGA\YF-012-V1.0-FPGA.sdk\project_pd\bootimg" key="zynq_flash_files_selection"/>
+	<item value="F:\Project\RG-2018-YF-001\FPGA\YF-012-V2.1-FPGA\YF-012-V1.0-FPGA\YF-012-V1.0-FPGA.sdk\project_pd\bootimg" key="last_stored_selection"/>
+</section>

@@ -1,0 +1,16 @@
+com.xilinx.sdk.linkgen.prefs.project_pd\:.bss=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:.data=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:.data1=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:.fixup=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:.rodata=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:.rodata1=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:.sbss=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:.sbss2=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:.sdata=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:.sdata2=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:.text=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:heap=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:heap-size=1024
+com.xilinx.sdk.linkgen.prefs.project_pd\:stack=ps7_ddr_0_S_AXI_BASEADDR
+com.xilinx.sdk.linkgen.prefs.project_pd\:stack-size=1024
+eclipse.preferences.version=1

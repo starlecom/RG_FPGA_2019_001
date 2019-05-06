@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Wed Dec 27 14:50:55 2017
+# Process ID: 1136
+# Current directory: F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.runs/impl_1
+# Command line: vivado.exe -log design_ps_wrapper.vdi -applog -messageDb vivado.pb -mode batch -source design_ps_wrapper.tcl -notrace
+# Log file: F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.runs/impl_1/design_ps_wrapper.vdi
+# Journal file: F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source design_ps_wrapper.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 365 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.4
+INFO: [Device 21-403] Loading part xc7z020clg484-2

@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file D:\work\fpgawork\YF-012-V1.0-FPGA\YF-012-V1.0-FPGA.runs\impl_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: 没有权限

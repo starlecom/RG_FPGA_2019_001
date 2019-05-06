@@ -1,0 +1,21 @@
+13:17:27 **** Build of configuration Debug for project smp_fsbl_bsp_xuartlite_polled_example_1 ****
+make all 
+'Building file: ../src/xuartlite_polled_example.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_polled_example.o" -I../../smp_fsbl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xuartlite_polled_example.d" -MT"src/xuartlite_polled_example.d" -o "src/xuartlite_polled_example.o" "../src/xuartlite_polled_example.c"
+'Finished building: ../src/xuartlite_polled_example.c'
+' '
+'Building target: smp_fsbl_bsp_xuartlite_polled_example_1.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../smp_fsbl_bsp/ps7_cortexa9_0/lib -o "smp_fsbl_bsp_xuartlite_polled_example_1.elf"  ./src/xuartlite_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group
+'Finished building target: smp_fsbl_bsp_xuartlite_polled_example_1.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size smp_fsbl_bsp_xuartlite_polled_example_1.elf  |tee "smp_fsbl_bsp_xuartlite_polled_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22072	   1168	  22692	  45932	   b36c	smp_fsbl_bsp_xuartlite_polled_example_1.elf
+'Finished building: smp_fsbl_bsp_xuartlite_polled_example_1.elf.size'
+' '
+
+13:17:28 Build Finished (took 420ms)
+

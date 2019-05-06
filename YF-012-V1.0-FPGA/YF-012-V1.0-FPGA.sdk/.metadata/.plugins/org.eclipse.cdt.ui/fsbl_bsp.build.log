@@ -1,0 +1,6 @@
+09:31:51 **** Build of project fsbl_bsp ****
+make -k all 
+make: *** 没有规则可以创建目标“all”.
+
+09:31:51 Build Finished (took 120ms)
+

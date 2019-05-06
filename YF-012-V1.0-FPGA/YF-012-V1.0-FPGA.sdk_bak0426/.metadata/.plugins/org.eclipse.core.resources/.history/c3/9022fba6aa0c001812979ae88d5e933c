@@ -1,0 +1,237 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+
+#include <stdio.h>
+#include "sys_intr.h"
+#include "platform.h"
+#include "dma_intr.h"
+#include "timer_intr.h"
+#include "gpio_dev.h"
+#include "lwip_mod.h"
+#include "ps7_init.h"
+#include "software_intr.h"
+#include "core1_start.h"
+#include "xqspips_flash.h"
+
+
+//#define TIMER_LOAD_VALUE    333333 //1ms
+#define TIMER_LOAD_VALUE    9260 //28us
+
+static XScuGic Intc; //GIC
+XAxiDma AxiDma;
+static  XScuTimer Timer;//timer
+static XQspiPs QspiInstance;
+
+u16 *RxBufferPtr[1];  /* ping pong buffers*/
+
+volatile u32 RX_ready=1;
+volatile u32 TX_ready=1;
+
+volatile u32 RX_success;
+volatile u32 TX_success;
+
+float speed_tx;
+float speed_rx;
+
+int led_flag=0;
+int led=0;
+
+
+
+
+int dma_trans()
+{
+	static u8  clr_cnt = 0;
+	static u8  speed_cal_step = 2;
+	static u32 pulse_cnt_bk1 = 0;
+	static u32 pulse_cnt_bk2 = 0;
+	u32 pulse_num = 0;
+	u32 tmp = 0;
+
+	xil_printf("----PDCheck Test----\r\n");
+
+	Timer_start(&Timer);
+
+	while(1)
+	{
+		TcpRecv();
+
+		if(syn_mode_flag)
+		{
+			syn_mode_flag = 0;
+			Gen_Software_Intr(&Intc, CORE0_TO_CORE1_INTR_ID, XSCUGIC_SPI_CPU1_MASK);
+		}
+
+		if(TcpTmrFlag)		/* call tcp timer every 250ms */
+		{
+			if (led_flag > 0)
+			{
+				led_flag = 0;
+				gpio_set_led(0x01);
+			}
+			else
+			{
+				led_flag = 1;
+				gpio_set_led(0x00);
+			}
+			m_tcp_tmr();
+			TcpTmrFlag = 0;
+		}
+
+		if(tmr_1s_flag)
+		{
+			tmr_1s_flag = 0;
+			clr_cnt++;
+			switch(speed_cal_step)
+			{
+				case 0: pulse_cnt_bk1  = dma_cnt;     speed_cal_step++;   break;
+				case 1: pulse_cnt_bk2  = dma_cnt;
+						pulse_num      = pulse_cnt_bk2 - pulse_cnt_bk1;
+//						sprintf(send_buf,"pulse_num=%d\n\r",pulse_num);
+//						uartlite_send(send_buf);
+						dma_cnt = 0;                  speed_cal_step++;   break;
+				default:                              speed_cal_step++;   break;
+			}
+
+			if(speed_cal_step >= 3)//calculate transmission speed every 3s
+			{
+				speed_cal_step = 0;
+				if((pulse_num > 1000)||(pulse_num==0))
+				{
+					change_speed_time(72);
+				}
+				else
+				{
+					tmp = 200000000/(1385*pulse_num);
+					if(tmp > 36000)
+						tmp = 36000;
+					change_speed_time((u16)tmp);
+					//xil_printf("speed_time=%d\n\r",tmp);
+				}
+			}
+			if(tmp >= 100)
+			{
+				if(clr_cnt >= 2)
+				{
+					clr_cnt = 0;
+					if(get_mode_now()==0) //if it isn't in storage mode, it updates every 2s.
+					{
+						update_trans_size(pulse_num);
+						clr_rec_cnt();
+					}
+				}
+			}
+			else
+			{
+				if(get_mode_now()==0) //if it isn't in storage mode, it updates every 1s.
+				{
+					update_trans_size(pulse_num);
+					clr_rec_cnt();
+			}
+			}
+		}
+		/*receive input packet from emac*/
+		xemacif_input(netif);//将MAC队列里的packets传输到你的LwIP/IP stack里
+		/* if connected to the server, start receive data from PL through axidma, then transmit the data to the PC software by TCP*/
+		if(tcp_client_connected)
+		{
+			DmaReceive();
+			if(tmr_2ms7_flag)
+			{
+				tmr_2ms7_flag = 0;
+				send_received_data();
+			}
+			tmr_2s_flag_cnt = 0;
+		}
+		else
+		{
+			if (tmr_2s_flag==1)
+			{
+				tcp_send_init();
+				tmr_2s_flag=0;
+				tmr_2s_flag_cnt=0;
+				first_packet_flag=1;
+				packet_trans_done=1;
+			}
+		}
+	}
+	return 0;
+}
+
+int init_intr_sys(void)
+{
+	DMA_Intr_Init(&AxiDma,0);//initial interrupt system
+	Timer_init(&Timer,TIMER_LOAD_VALUE,0);
+	Init_Intr_System(&Intc);
+	Setup_Intr_Exception(&Intc);
+	DMA_Setup_Intr_System(&Intc,&AxiDma,0,RX_INTR_ID);//setup dma interrupt system
+	/*initial software interrupt of local cpu*/
+	Init_Software_Intr(&Intc, Cpu0_Intr_Hanedler, CORE1_TO_CORE0_INTR_ID, 0);
+	Timer_Setup_Intr_System(&Intc,&Timer,TIMER_IRPT_INTR);
+	DMA_Intr_Enable(&Intc,&AxiDma);
+
+
+	return 0;
+}
+
+int main()
+{
+    init_platform();
+    ps7_post_config();
+    m_gpio_init();
+    qspi_init(&QspiInstance,XPAR_XQSPIPS_0_DEVICE_ID);
+    RxBufferPtr[0] = (u16 *)RX_BUFFER0_BASE;
+    shared_mem_init();
+    init_intr_sys();
+
+    lwip_setup();
+    //Start_cpu1();
+    dma_trans();
+
+    cleanup_platform();
+    return 0;
+}

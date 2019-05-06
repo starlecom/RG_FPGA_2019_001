@@ -1,0 +1,685 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Aug 23 14:13:53 2018
+# Process ID: 6196
+# Current directory: f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.tmp/datagen_3ch_v1_0_project/DataGen_3ch_v1_0_project.runs/fir_compiler_0_synth_1
+# Command line: vivado.exe -log fir_compiler_0.vds -mode batch -messageDb vivado.pb -notrace -source fir_compiler_0.tcl
+# Log file: f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.tmp/datagen_3ch_v1_0_project/DataGen_3ch_v1_0_project.runs/fir_compiler_0_synth_1/fir_compiler_0.vds
+# Journal file: f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.tmp/datagen_3ch_v1_0_project/DataGen_3ch_v1_0_project.runs/fir_compiler_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source fir_compiler_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xlinx/Vivado/2015.4/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'fir_compiler_0' generated file not found 'f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'fir_compiler_0' generated file not found 'f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'fir_compiler_0' generated file not found 'f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'fir_compiler_0' generated file not found 'f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'fir_compiler_0' generated file not found 'f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_0_sim_netlist.vhdl'. Please regenerate to continue.
+Command: synth_design -top fir_compiler_0 -part xc7z020clg484-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 306.973 ; gain = 135.406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fir_compiler_0' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/synth/fir_compiler_0.vhd:70]
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_5' declared at 'f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2.vhd:119' bound to instance 'U0' of component 'fir_compiler_v7_2_5' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/synth/fir_compiler_0.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'fir_compiler_v7_2_5' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2.vhd:244]
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_5_viv' declared at 'f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:59610' bound to instance 'i_synth' of component 'fir_compiler_v7_2_5_viv' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2.vhd:250]
+INFO: [Synth 8-638] synthesizing module 'fir_compiler_v7_2_5_viv' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:59747]
+INFO: [Synth 8-3491] module 'single_rate' declared at 'f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:14901' bound to instance 'i_single_rate' of component 'single_rate' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:59757]
+INFO: [Synth 8-638] synthesizing module 'single_rate' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15029]
+WARNING: [Synth 8-5639] ignoring null variable initialization [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:2884]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15297]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15297]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15299]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15330]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15330]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15330]
+INFO: [Synth 8-638] synthesizing module 'glb_ifx_slave' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2905]
+INFO: [Synth 8-3491] module 'glb_srl_fifo' declared at 'f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2422' bound to instance 'fifo0' of component 'glb_srl_fifo' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2938]
+INFO: [Synth 8-638] synthesizing module 'glb_srl_fifo' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2474]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2522]
+INFO: [Synth 8-256] done synthesizing module 'glb_srl_fifo' (1#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2474]
+INFO: [Synth 8-256] done synthesizing module 'glb_ifx_slave' (2#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/axi_utils_v2_0_1/hdl/axi_utils_v2_0_vh_rfs.vhd:2905]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15630]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15643]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15645]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15685]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15702]
+INFO: [Synth 8-638] synthesizing module 'delay' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay' (3#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15977]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized0' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized0' (3#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized1' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized1' (3#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized2' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized2' (3#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'cntrl_delay' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:10469]
+INFO: [Synth 8-506] null port 'ADDR_IN' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:10456]
+INFO: [Synth 8-506] null port 'ADDR_OUT' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:10458]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:10477]
+INFO: [Synth 8-256] done synthesizing module 'cntrl_delay' (4#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:10469]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16249]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16250]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16198]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16238]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16239]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:5861]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:5883]
+INFO: [Synth 8-638] synthesizing module 'filt_mem' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-506] null port 'ADDRA' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12546]
+INFO: [Synth 8-506] null port 'ADDRB' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12551]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12578]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12583]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12593]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12606]
+INFO: [Synth 8-638] synthesizing module 'sp_mem' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem' (5#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized0' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized0' (5#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-256] done synthesizing module 'filt_mem' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-638] synthesizing module 'filt_mem__parameterized0' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-506] null port 'ADDRA' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12546]
+INFO: [Synth 8-506] null port 'ADDRB' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12551]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12578]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12583]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12593]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12606]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized1' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized1' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized2' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized2' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-256] done synthesizing module 'filt_mem__parameterized0' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-638] synthesizing module 'filt_mem__parameterized1' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-506] null port 'ADDRA' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12546]
+INFO: [Synth 8-506] null port 'ADDRB' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12551]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12578]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12583]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12593]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12606]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized3' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized3' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized4' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized4' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-256] done synthesizing module 'filt_mem__parameterized1' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-638] synthesizing module 'filt_mem__parameterized2' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-506] null port 'ADDRA' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12546]
+INFO: [Synth 8-506] null port 'ADDRB' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12551]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12578]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12583]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12593]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12606]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized5' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized5' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized6' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized6' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-256] done synthesizing module 'filt_mem__parameterized2' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-638] synthesizing module 'filt_mem__parameterized3' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-506] null port 'ADDRA' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12546]
+INFO: [Synth 8-506] null port 'ADDRB' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12551]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12578]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12583]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12593]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12606]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized7' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized7' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized8' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized8' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-256] done synthesizing module 'filt_mem__parameterized3' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-638] synthesizing module 'filt_mem__parameterized4' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-506] null port 'ADDRA' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12546]
+INFO: [Synth 8-506] null port 'ADDRB' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12551]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12578]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12583]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12593]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12606]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized9' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized9' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized10' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized10' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-256] done synthesizing module 'filt_mem__parameterized4' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-638] synthesizing module 'filt_mem__parameterized5' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-506] null port 'ADDRA' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12546]
+INFO: [Synth 8-506] null port 'ADDRB' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12551]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12578]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12583]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12593]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12606]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized11' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized11' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized12' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized12' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-256] done synthesizing module 'filt_mem__parameterized5' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-638] synthesizing module 'filt_mem__parameterized6' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-506] null port 'ADDRA' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12546]
+INFO: [Synth 8-506] null port 'ADDRB' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12551]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12578]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12583]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12593]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12606]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized13' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized13' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized14' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized14' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-256] done synthesizing module 'filt_mem__parameterized6' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-638] synthesizing module 'filt_mem__parameterized7' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-506] null port 'ADDRA' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12546]
+INFO: [Synth 8-506] null port 'ADDRB' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12551]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12578]
+INFO: [Synth 8-3919] null assignment ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12583]
+INFO: [Common 17-14] Message 'Synth 8-3919' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-638] synthesizing module 'sp_mem__parameterized15' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-506] null port 'ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7822]
+INFO: [Synth 8-256] done synthesizing module 'sp_mem__parameterized15' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:7836]
+INFO: [Synth 8-256] done synthesizing module 'filt_mem__parameterized7' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:12564]
+INFO: [Synth 8-638] synthesizing module 'buff' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized3' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized3' (6#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized4' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized4' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized5' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized5' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized6' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized6' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized7' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized7' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized8' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized8' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized9' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized9' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized10' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized10' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized11' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized11' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized12' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized12' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized13' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized13' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized14' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized14' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized15' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized15' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized16' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized16' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized17' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized17' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized18' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized18' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized19' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized19' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized20' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized20' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized0' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized21' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized21' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized0' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized1' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized22' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized22' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized1' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized2' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized23' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized23' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized2' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized3' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized24' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized24' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized3' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized4' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized25' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized25' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized4' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized5' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized26' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized26' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized5' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized6' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized27' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized27' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized6' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized7' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized28' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized28' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized7' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized8' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized29' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized29' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized8' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized9' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized30' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized30' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized9' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized10' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized31' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized31' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized10' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized11' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized32' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized32' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized11' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized12' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized33' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized33' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized12' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized13' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized34' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized34' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized13' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized14' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized35' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized35' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized14' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'buff__parameterized15' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-506] null port 'READ_ADDR' ignored [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9459]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized36' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized36' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'buff__parameterized15' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:9468]
+INFO: [Synth 8-638] synthesizing module 'addsub_mult_add' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:11711]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized37' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized37' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized38' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized38' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized39' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized39' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized40' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized40' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'calc' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:10932]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized41' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized41' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized42' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized42' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized43' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized43' (7#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-113] binding component instance 'i_dsp48e1' to cell 'DSP48E1' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:11153]
+INFO: [Synth 8-256] done synthesizing module 'calc' (8#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:10932]
+INFO: [Synth 8-256] done synthesizing module 'addsub_mult_add' (9#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:11711]
+INFO: [Synth 8-638] synthesizing module 'addsub_mult_add__parameterized0' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:11711]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized44' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized44' (9#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized45' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized45' (9#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized46' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized46' (9#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized47' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized47' (9#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized48' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized48' (9#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'addsub_mult_add__parameterized0' (9#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:11711]
+INFO: [Synth 8-638] synthesizing module 'delay__parameterized49' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-256] done synthesizing module 'delay__parameterized49' (9#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:8907]
+INFO: [Synth 8-3936] Found unconnected internal register 'g_parallel.g_paths[0].p_path_out_reg[0][fab]' and it is trimmed from '48' to '33' bits. [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:17002]
+INFO: [Synth 8-256] done synthesizing module 'single_rate' (10#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15029]
+INFO: [Synth 8-256] done synthesizing module 'fir_compiler_v7_2_5_viv' (11#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:59747]
+INFO: [Synth 8-256] done synthesizing module 'fir_compiler_v7_2_5' (12#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2.vhd:244]
+INFO: [Synth 8-256] done synthesizing module 'fir_compiler_0' (13#1) [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/synth/fir_compiler_0.vhd:70]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 367.500 ; gain = 195.934
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+INFO: [Synth 8-3295] tying undriven pin \g_parallel.g_cntrl[0].g_sym_cntrl.i_delay :CNTRL_IN[4] to constant 0 [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16143]
+INFO: [Synth 8-3295] tying undriven pin \g_parallel.g_cntrl[0].g_sym_cntrl.i_delay :CNTRL_IN[3] to constant 0 [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16143]
+INFO: [Synth 8-3295] tying undriven pin \g_parallel.g_cntrl[1].g_sym_cntrl.i_delay :CNTRL_IN[4] to constant 0 [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16143]
+INFO: [Synth 8-3295] tying undriven pin \g_parallel.g_cntrl[1].g_sym_cntrl.i_delay :CNTRL_IN[3] to constant 0 [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:16143]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 367.500 ; gain = 195.934
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg484-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/constraints/fir_compiler_v7_2.xdc] for cell 'U0'
+Finished Parsing XDC File [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/constraints/fir_compiler_v7_2.xdc] for cell 'U0'
+Parsing XDC File [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.tmp/datagen_3ch_v1_0_project/DataGen_3ch_v1_0_project.runs/fir_compiler_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.tmp/datagen_3ch_v1_0_project/DataGen_3ch_v1_0_project.runs/fir_compiler_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.204 . Memory (MB): peak = 637.258 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:11 ; elapsed = 00:01:17 . Memory (MB): peak = 637.258 ; gain = 465.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:11 ; elapsed = 00:01:17 . Memory (MB): peak = 637.258 ; gain = 465.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:17 . Memory (MB): peak = 637.258 ; gain = 465.691
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'g_parallel.we_gen_reg' into 'g_parallel.we_gen_cntrl_reg' [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15681]
+INFO: [Synth 8-3936] Found unconnected internal register 'g_parallel.we_gen_algn_reg' and it is trimmed from '3' to '2' bits. [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/hdl/fir_compiler_v7_2_vh_rfs.vhd:15743]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 637.258 ; gain = 465.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 637.258 ; gain = 465.691
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 637.258 ; gain = 465.691
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 637.258 ; gain = 465.691
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[15].g_sym_cntrl.g_reg.cntrl_reg[15][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[14].g_sym_cntrl.g_reg.cntrl_reg[14][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[13].g_sym_cntrl.g_reg.cntrl_reg[13][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[12].g_sym_cntrl.g_reg.cntrl_reg[12][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[11].g_sym_cntrl.g_reg.cntrl_reg[11][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[10].g_sym_cntrl.g_reg.cntrl_reg[10][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[9].g_sym_cntrl.g_reg.cntrl_reg[9][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[8].g_sym_cntrl.g_reg.cntrl_reg[8][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[7].g_sym_cntrl.g_reg.cntrl_reg[7][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[6].g_sym_cntrl.g_reg.cntrl_reg[6][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[5].g_sym_cntrl.g_reg.cntrl_reg[5][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[4].g_sym_cntrl.g_reg.cntrl_reg[4][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[3].g_sym_cntrl.g_reg.cntrl_reg[3][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[2].g_sym_cntrl.g_reg.cntrl_reg[2][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[1].g_sym_cntrl.g_reg.cntrl_reg[1][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[16].g_sym_cntrl.g_reg.cntrl_reg[16][6] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.g_cntrl[16].g_sym_cntrl.g_reg.cntrl_reg[16][1] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.flush_sym_data_reg ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.i_cntrl_sym_buff_sclr/gen_reg.d_reg_reg[0] ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/i_synth/\g_single_rate.i_single_rate/g_parallel.rfd_int_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tlast_int_reg )
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tlast_int_reg ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3332] Sequential element (\g_single_rate.i_single_rate/g_parallel.rfd_int_reg ) is unused and will be removed from module fir_compiler_v7_2_5_viv.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\g_single_rate.i_single_rate/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo0 /not_aempty_1_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/i_synth/\g_single_rate.i_single_rate/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo0 /aempty_1_reg)
+INFO: [Synth 8-3332] Sequential element (aempty_1_reg) is unused and will be removed from module glb_srl_fifo.
+INFO: [Synth 8-3332] Sequential element (not_aempty_1_reg) is unused and will be removed from module glb_srl_fifo.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:20 . Memory (MB): peak = 637.258 ; gain = 465.691
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:13 ; elapsed = 00:01:20 . Memory (MB): peak = 637.258 ; gain = 465.691
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:26 ; elapsed = 00:01:33 . Memory (MB): peak = 665.754 ; gain = 494.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:26 ; elapsed = 00:01:34 . Memory (MB): peak = 682.570 ; gain = 511.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:35 . Memory (MB): peak = 693.594 ; gain = 522.027
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:28 ; elapsed = 00:01:35 . Memory (MB): peak = 693.594 ; gain = 522.027
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:28 ; elapsed = 00:01:35 . Memory (MB): peak = 693.594 ; gain = 522.027
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:28 ; elapsed = 00:01:36 . Memory (MB): peak = 693.594 ; gain = 522.027
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:28 ; elapsed = 00:01:36 . Memory (MB): peak = 693.594 ; gain = 522.027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:28 ; elapsed = 00:01:36 . Memory (MB): peak = 693.594 ; gain = 522.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:28 ; elapsed = 00:01:36 . Memory (MB): peak = 693.594 ; gain = 522.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:29 ; elapsed = 00:01:36 . Memory (MB): peak = 693.594 ; gain = 522.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:29 ; elapsed = 00:01:36 . Memory (MB): peak = 693.594 ; gain = 522.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |DSP48E1 |    17|
+|2     |LUT1    |     1|
+|3     |LUT2    |     4|
+|4     |LUT4    |     2|
+|5     |LUT5    |     5|
+|6     |LUT6    |     5|
+|7     |SRL16E  |   512|
+|8     |SRLC32E |     1|
+|9     |FDRE    |   858|
+|10    |FDSE    |     7|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:29 ; elapsed = 00:01:36 . Memory (MB): peak = 693.594 ; gain = 522.027
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:01:22 . Memory (MB): peak = 693.594 ; gain = 198.496
+Synthesis Optimization Complete : Time (s): cpu = 00:01:29 ; elapsed = 00:01:36 . Memory (MB): peak = 693.594 ; gain = 522.027
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/constraints/fir_compiler_v7_2.xdc] for cell 'U0'
+Finished Parsing XDC File [f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib/DataGenV5_3ch_mod/sources_1/src/fir_compiler_0/fir_compiler_v7_2_5/constraints/fir_compiler_v7_2.xdc] for cell 'U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+418 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:28 ; elapsed = 00:01:34 . Memory (MB): peak = 693.594 ; gain = 468.254
+INFO: [Coretcl 2-1174] Renamed 148 cell refs.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 693.594 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 23 14:15:35 2018...

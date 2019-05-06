@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="design_ps_wrapper_hw_platform_0" key="programflash.hwplatform"/>
+	<item value="false" key="design_ps_wrapper_hw_platform_0-blankCheck"/>
+	<item value="Auto Detect" key="design_ps_wrapper_hw_platform_0-device"/>
+	<item value="qspi_single" key="design_ps_wrapper_hw_platform_0-flashType"/>
+	<item value="Local" key="design_ps_wrapper_hw_platform_0-target"/>
+	<item value="false" key="design_ps_wrapper_hw_platform_0-verifyFlash"/>
+	<item value="F:\Project\ZGDL-2017-YF-012\cpu\V1.2-FPGA\YF-012-V1.2-FPGA_bk2018_0718_fir\YF-012-V1.0-FPGA\YF-012-V1.0-FPGA.sdk\project_pd\bootimg\boot_history\0726_FIR电科院测试\BOOT.bin" key="design_ps_wrapper_hw_platform_0-imgFile"/>
+	<item value="" key="design_ps_wrapper_hw_platform_0-fsblFile"/>
+	<item value="" key="design_ps_wrapper_hw_platform_0-offSet"/>
+</section>

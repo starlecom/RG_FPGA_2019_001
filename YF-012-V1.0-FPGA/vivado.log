@@ -1,0 +1,69 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Dec 17 13:31:52 2018
+# Process ID: 7620
+# Current directory: F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12432 F:\Project\RG-2018-YF-001\FPGA\YF-012-V2.1-FPGA\YF-012-V1.0-FPGA\YF-012-V1.0-FPGA.xpr
+# Log file: F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/vivado.log
+# Journal file: F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/Miz_ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xlinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:38 ; elapsed = 00:00:50 . Memory (MB): peak = 1035.418 ; gain = 421.379
+open_bd_design {F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:1.1 - axis_data_fifo_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_2
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_3
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_4
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_5
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_6
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_7
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_8
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_9
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_10
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_11
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_12
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_3
+Adding component instance block -- xilinx.com:ip:clk_wiz:5.2 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:xadc_wiz:3.2 - xadc_wiz_0
+INFO: [Device 21-403] Loading part xc7z020clg484-2
+Adding component instance block -- xilinx.com:user:Timer_10us_m:1.0 - Timer_10us_m_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_13
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_14
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_15
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_16
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_17
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_18
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_19
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_20
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_21
+Adding component instance block -- xilinx.com:user:DataGen_3ch:1.0 - DataGen_3ch_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - tier2_xbar_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - tier2_xbar_1
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - tier2_xbar_2
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - tier2_xbar_3
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Successfully read diagram <design_ps> from BD file <F:/Project/RG-2018-YF-001/FPGA/YF-012-V2.1-FPGA/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd>
+open_bd_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 1518.457 ; gain = 474.117
+set_property location {2 520 1467} [get_bd_cells DataGen_3ch_0]
+undo
+INFO: [Common 17-17] undo 'set_property location {2 520 1467} [get_bd_cells DataGen_3ch_0]'
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 17 13:38:47 2018...

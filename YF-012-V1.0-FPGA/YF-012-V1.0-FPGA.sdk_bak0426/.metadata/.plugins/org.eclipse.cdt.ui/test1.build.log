@@ -1,0 +1,14 @@
+16:47:26 **** Auto Build of configuration Debug for project test1 ****
+make all 
+'Building file: ../src/dma_intr.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dma_intr.o" -I../../test1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dma_intr.d" -MT"src/dma_intr.d" -o "src/dma_intr.o" "../src/dma_intr.c"
+In file included from ../src/dma_intr.c:8:0:
+../src/dma_intr.h:9:21: fatal error: xaxidma.h: No such file or directory
+ #include "xaxidma.h"
+                     ^
+compilation terminated.
+make: *** [src/dma_intr.o] ´íÎó 1
+
+16:47:26 Build Finished (took 348ms)
+

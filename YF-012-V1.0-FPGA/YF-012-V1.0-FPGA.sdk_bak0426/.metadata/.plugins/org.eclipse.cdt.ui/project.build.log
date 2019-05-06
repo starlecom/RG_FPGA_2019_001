@@ -1,0 +1,75 @@
+16:52:45 **** Auto Build of configuration Debug for project project ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'axi_dma_test':
+../src/main.c:104:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32' [-Wformat=]
+    sprintf(oled_str,"RX=%d",RX_success);
+    ^
+../src/main.c:104:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32' [-Wformat=]
+../src/main.c:106:4: warning: implicit declaration of function 'print_message' [-Wimplicit-function-declaration]
+    print_message(oled_str,0);
+    ^
+../src/main.c:114:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32' [-Wformat=]
+    sprintf(oled_str,"TX=%d",TX_success);
+    ^
+../src/main.c:114:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32' [-Wformat=]
+../src/main.c:140:2: warning: implicit declaration of function 'DMA_DisableIntrSystem' [-Wimplicit-function-declaration]
+  DMA_DisableIntrSystem(&Intc, TX_INTR_ID, RX_INTR_ID);
+  ^
+In file included from ../src/main.c:12:0:
+../src/dma_intr.h:25:21: error: 'XPAR_FABRIC_AXI_DMA_0_MM2S_INTROUT_INTR' undeclared (first use in this function)
+ #define TX_INTR_ID  XPAR_FABRIC_AXI_DMA_0_MM2S_INTROUT_INTR
+                     ^
+../src/main.c:140:31: note: in expansion of macro 'TX_INTR_ID'
+  DMA_DisableIntrSystem(&Intc, TX_INTR_ID, RX_INTR_ID);
+                               ^
+../src/dma_intr.h:25:21: note: each undeclared identifier is reported only once for each function it appears in
+ #define TX_INTR_ID  XPAR_FABRIC_AXI_DMA_0_MM2S_INTROUT_INTR
+                     ^
+../src/main.c:140:31: note: in expansion of macro 'TX_INTR_ID'
+  DMA_DisableIntrSystem(&Intc, TX_INTR_ID, RX_INTR_ID);
+                               ^
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:153:2: warning: implicit declaration of function 'Setup_Intr_Exception' [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^
+In file included from ../src/main.c:12:0:
+../src/dma_intr.h:25:21: error: 'XPAR_FABRIC_AXI_DMA_0_MM2S_INTROUT_INTR' undeclared (first use in this function)
+ #define TX_INTR_ID  XPAR_FABRIC_AXI_DMA_0_MM2S_INTROUT_INTR
+                     ^
+../src/main.c:154:38: note: in expansion of macro 'TX_INTR_ID'
+  DMA_Setup_Intr_System(&Intc,&AxiDma,TX_INTR_ID,RX_INTR_ID);//setup dma interrpt system
+                                      ^
+../src/main.c: In function 'main':
+../src/main.c:162:2: warning: implicit declaration of function 'XGpio_Initialize' [-Wimplicit-function-declaration]
+  XGpio_Initialize(&Gpio, AXI_GPIO_DEV_ID);
+  ^
+../src/main.c:162:20: error: 'Gpio' undeclared (first use in this function)
+  XGpio_Initialize(&Gpio, AXI_GPIO_DEV_ID);
+                    ^
+../src/main.c:162:26: error: 'AXI_GPIO_DEV_ID' undeclared (first use in this function)
+  XGpio_Initialize(&Gpio, AXI_GPIO_DEV_ID);
+                          ^
+../src/main.c:163:2: warning: implicit declaration of function 'XGpio_SetDataDirection' [-Wimplicit-function-declaration]
+  XGpio_SetDataDirection(&Gpio, 1, 0);
+  ^
+../src/main.c:165:2: warning: implicit declaration of function 'XGpio_DiscreteWrite' [-Wimplicit-function-declaration]
+  XGpio_DiscreteWrite(&Gpio, 1, 1);
+  ^
+../src/main.c:166:2: warning: implicit declaration of function 'oled_fresh_en' [-Wimplicit-function-declaration]
+  oled_fresh_en();// enable oled
+  ^
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:158:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.c: In function 'main':
+../src/main.c:169:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/main.o] ´íÎó 1
+
+16:52:45 Build Finished (took 347ms)
+

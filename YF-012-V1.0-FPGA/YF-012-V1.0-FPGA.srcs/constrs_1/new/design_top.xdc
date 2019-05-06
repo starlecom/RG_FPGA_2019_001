@@ -1,0 +1,372 @@
+set_property PACKAGE_PIN L19 [get_ports {led[0]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {led[0]}]
+
+set_property PACKAGE_PIN V8 [get_ports {CH_EN1[0]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {CH_EN1[0]}]
+set_property PACKAGE_PIN U10 [get_ports {CH_EN2[0]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {CH_EN2[0]}]
+set_property PACKAGE_PIN V10 [get_ports {CH_EN3[0]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {CH_EN3[0]}]
+
+set_property PACKAGE_PIN M19 [get_ports clk_p]
+set_property PACKAGE_PIN M20 [get_ports clk_n]
+set_property IOSTANDARD LVDS_25 [get_ports clk_p]
+set_property IOSTANDARD LVDS_25 [get_ports clk_n]
+
+set_property IOSTANDARD LVCMOS25 [get_ports Vaux3_v_p]
+
+set_property PACKAGE_PIN A16 [get_ports Vaux3_v_p]
+set_property PACKAGE_PIN A17 [get_ports Vaux3_v_n]
+set_property IOSTANDARD LVCMOS25 [get_ports Vaux3_v_n]
+
+create_clock -period 10.000 -waveform {0.000 5.000} clk_p
+
+set_property PACKAGE_PIN AB2 [get_ports {hf_ch1[0]}]
+set_property PACKAGE_PIN AB1 [get_ports {hf_ch1[1]}]
+set_property PACKAGE_PIN AB5 [get_ports {hf_ch1[2]}]
+set_property PACKAGE_PIN AB4 [get_ports {hf_ch1[3]}]
+set_property PACKAGE_PIN Y4 [get_ports {hf_ch1[4]}]
+set_property PACKAGE_PIN AA4 [get_ports {hf_ch1[5]}]
+set_property PACKAGE_PIN V5 [get_ports {hf_ch1[6]}]
+set_property PACKAGE_PIN V4 [get_ports {hf_ch1[7]}]
+set_property PACKAGE_PIN AB7 [get_ports {hf_ch1[8]}]
+set_property PACKAGE_PIN AB6 [get_ports {hf_ch1[9]}]
+set_property PACKAGE_PIN AA9 [get_ports {hf_ch1[10]}]
+set_property PACKAGE_PIN AA8 [get_ports {hf_ch1[11]}]
+set_property PACKAGE_PIN AB10 [get_ports {hf_ch1[12]}]
+set_property PACKAGE_PIN AB9 [get_ports {hf_ch1[13]}]
+set_property PACKAGE_PIN AA11 [get_ports {hf_ch1[14]}]
+set_property PACKAGE_PIN AB11 [get_ports {hf_ch1[15]}]
+
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[0]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[1]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[2]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[3]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[4]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[5]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[6]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[7]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[8]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[9]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[10]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[11]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[12]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[13]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[14]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch1[15]}]
+
+
+set_property PACKAGE_PIN AA12 [get_ports {hf_ch2[0]}]
+set_property PACKAGE_PIN AB12 [get_ports {hf_ch2[1]}]
+set_property PACKAGE_PIN T4 [get_ports {hf_ch2[2]}]
+set_property PACKAGE_PIN U4 [get_ports {hf_ch2[3]}]
+set_property PACKAGE_PIN R6 [get_ports {hf_ch2[4]}]
+set_property PACKAGE_PIN T6 [get_ports {hf_ch2[5]}]
+set_property PACKAGE_PIN U6 [get_ports {hf_ch2[6]}]
+set_property PACKAGE_PIN U5 [get_ports {hf_ch2[7]}]
+set_property PACKAGE_PIN W6 [get_ports {hf_ch2[8]}]
+set_property PACKAGE_PIN W5 [get_ports {hf_ch2[9]}]
+set_property PACKAGE_PIN Y6 [get_ports {hf_ch2[10]}]
+set_property PACKAGE_PIN Y5 [get_ports {hf_ch2[11]}]
+set_property PACKAGE_PIN AA7 [get_ports {hf_ch2[12]}]
+set_property PACKAGE_PIN AA6 [get_ports {hf_ch2[13]}]
+set_property PACKAGE_PIN V7 [get_ports {hf_ch2[14]}]
+set_property PACKAGE_PIN W7 [get_ports {hf_ch2[15]}]
+
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[0]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[1]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[2]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[3]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[4]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[5]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[6]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[7]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[8]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[9]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[10]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[11]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[12]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[13]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[14]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch2[15]}]
+
+set_property PACKAGE_PIN T16 [get_ports {hf_ch3[0]}]
+set_property PACKAGE_PIN T17 [get_ports {hf_ch3[1]}]
+set_property PACKAGE_PIN P17 [get_ports {hf_ch3[2]}]
+set_property PACKAGE_PIN P18 [get_ports {hf_ch3[3]}]
+set_property PACKAGE_PIN R19 [get_ports {hf_ch3[4]}]
+set_property PACKAGE_PIN T19 [get_ports {hf_ch3[5]}]
+set_property PACKAGE_PIN R20 [get_ports {hf_ch3[6]}]
+set_property PACKAGE_PIN R21 [get_ports {hf_ch3[7]}]
+set_property PACKAGE_PIN P20 [get_ports {hf_ch3[8]}]
+set_property PACKAGE_PIN P21 [get_ports {hf_ch3[9]}]
+set_property PACKAGE_PIN N19 [get_ports {hf_ch3[10]}]
+set_property PACKAGE_PIN N20 [get_ports {hf_ch3[11]}]
+set_property PACKAGE_PIN N22 [get_ports {hf_ch3[12]}]
+set_property PACKAGE_PIN P22 [get_ports {hf_ch3[13]}]
+set_property PACKAGE_PIN M21 [get_ports {hf_ch3[14]}]
+set_property PACKAGE_PIN M22 [get_ports {hf_ch3[15]}]
+
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[0]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[1]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[2]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[3]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[4]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[5]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[6]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[7]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[8]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[9]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[10]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[11]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[12]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[13]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[14]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {hf_ch3[15]}]
+
+
+set_property IOSTANDARD LVCMOS25 [get_ports uart_rt_rxd]
+set_property IOSTANDARD LVCMOS25 [get_ports uart_rt_txd]
+set_property PACKAGE_PIN H17 [get_ports uart_rt_txd]
+set_property PACKAGE_PIN H18 [get_ports uart_rt_rxd]
+
+
+
+
+
+
+#connect_debug_port dbg_hub/clk [get_nets u_ila_0_clk_in1_design_ps_clk_wiz_0_0]
+
+
+#create_debug_port u_ila_2 probe
+#set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe2]
+#set_property port_width 16 [get_debug_ports u_ila_2/probe2]
+#connect_debug_port u_ila_2/probe2 [get_nets [list {design_ps_i/DataGen_3ch_0/trig_level_l[0]} {design_ps_i/DataGen_3ch_0/trig_level_l[1]} {design_ps_i/DataGen_3ch_0/trig_level_l[2]} {design_ps_i/DataGen_3ch_0/trig_level_l[3]} {design_ps_i/DataGen_3ch_0/trig_level_l[4]} {design_ps_i/DataGen_3ch_0/trig_level_l[5]} {design_ps_i/DataGen_3ch_0/trig_level_l[6]} {design_ps_i/DataGen_3ch_0/trig_level_l[7]} {design_ps_i/DataGen_3ch_0/trig_level_l[8]} {design_ps_i/DataGen_3ch_0/trig_level_l[9]} {design_ps_i/DataGen_3ch_0/trig_level_l[10]} {design_ps_i/DataGen_3ch_0/trig_level_l[11]} {design_ps_i/DataGen_3ch_0/trig_level_l[12]} {design_ps_i/DataGen_3ch_0/trig_level_l[13]} {design_ps_i/DataGen_3ch_0/trig_level_l[14]} {design_ps_i/DataGen_3ch_0/trig_level_l[15]}]]
+#create_debug_port u_ila_2 probe
+#set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe3]
+#set_property port_width 16 [get_debug_ports u_ila_2/probe3]
+#connect_debug_port u_ila_2/probe3 [get_nets [list {design_ps_i/DataGen_3ch_0/trig_level[0]} {design_ps_i/DataGen_3ch_0/trig_level[1]} {design_ps_i/DataGen_3ch_0/trig_level[2]} {design_ps_i/DataGen_3ch_0/trig_level[3]} {design_ps_i/DataGen_3ch_0/trig_level[4]} {design_ps_i/DataGen_3ch_0/trig_level[5]} {design_ps_i/DataGen_3ch_0/trig_level[6]} {design_ps_i/DataGen_3ch_0/trig_level[7]} {design_ps_i/DataGen_3ch_0/trig_level[8]} {design_ps_i/DataGen_3ch_0/trig_level[9]} {design_ps_i/DataGen_3ch_0/trig_level[10]} {design_ps_i/DataGen_3ch_0/trig_level[11]} {design_ps_i/DataGen_3ch_0/trig_level[12]} {design_ps_i/DataGen_3ch_0/trig_level[13]} {design_ps_i/DataGen_3ch_0/trig_level[14]} {design_ps_i/DataGen_3ch_0/trig_level[15]}]]
+#create_debug_port u_ila_2 probe
+#set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe4]
+#set_property port_width 16 [get_debug_ports u_ila_2/probe4]
+#connect_debug_port u_ila_2/probe4 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[0]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[1]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[2]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[3]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[4]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[5]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[6]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[7]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[8]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[9]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[10]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[11]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[12]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[13]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[14]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/trig_level[15]}]]
+#create_debug_port u_ila_2 probe
+#set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe5]
+#set_property port_width 16 [get_debug_ports u_ila_2/probe5]
+#connect_debug_port u_ila_2/probe5 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[0]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[1]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[2]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[3]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[4]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[5]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[6]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[7]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[8]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[9]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[10]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[11]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[12]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[13]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[14]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[15]}]]
+#create_debug_port u_ila_2 probe
+#set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe6]
+#set_property port_width 1 [get_debug_ports u_ila_2/probe6]
+#connect_debug_port u_ila_2/probe6 [get_nets [list {CH_EN1_OBUF[0]}]]
+#create_debug_port u_ila_2 probe
+#set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe7]
+#set_property port_width 1 [get_debug_ports u_ila_2/probe7]
+#connect_debug_port u_ila_2/probe7 [get_nets [list {CH_EN2_OBUF[0]}]]
+#create_debug_port u_ila_2 probe
+#set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe8]
+#set_property port_width 1 [get_debug_ports u_ila_2/probe8]
+#connect_debug_port u_ila_2/probe8 [get_nets [list {CH_EN3_OBUF[0]}]]
+#create_debug_port u_ila_2 probe
+#set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe9]
+#set_property port_width 1 [get_debug_ports u_ila_2/probe9]
+#connect_debug_port u_ila_2/probe9 [get_nets [list design_ps_i/DataGen_3ch_0/DataGen_ready]]
+#connect_debug_port dbg_hub/clk [get_nets u_ila_0_clk_in1_design_ps_clk_wiz_0_0]
+
+create_debug_core u_ila_0_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0_0]
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0_0]
+set_property port_width 1 [get_debug_ports u_ila_0_0/clk]
+connect_debug_port u_ila_0_0/clk [get_nets [list design_ps_i/clk_wiz_0/inst/clk_in1_design_ps_clk_wiz_0_0]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0_0/probe0]
+set_property port_width 32 [get_debug_ports u_ila_0_0/probe0]
+connect_debug_port u_ila_0_0/probe0 [get_nets [list {design_ps_i/xadc_wiz_0/s_axi_rdata[0]} {design_ps_i/xadc_wiz_0/s_axi_rdata[1]} {design_ps_i/xadc_wiz_0/s_axi_rdata[2]} {design_ps_i/xadc_wiz_0/s_axi_rdata[3]} {design_ps_i/xadc_wiz_0/s_axi_rdata[4]} {design_ps_i/xadc_wiz_0/s_axi_rdata[5]} {design_ps_i/xadc_wiz_0/s_axi_rdata[6]} {design_ps_i/xadc_wiz_0/s_axi_rdata[7]} {design_ps_i/xadc_wiz_0/s_axi_rdata[8]} {design_ps_i/xadc_wiz_0/s_axi_rdata[9]} {design_ps_i/xadc_wiz_0/s_axi_rdata[10]} {design_ps_i/xadc_wiz_0/s_axi_rdata[11]} {design_ps_i/xadc_wiz_0/s_axi_rdata[12]} {design_ps_i/xadc_wiz_0/s_axi_rdata[13]} {design_ps_i/xadc_wiz_0/s_axi_rdata[14]} {design_ps_i/xadc_wiz_0/s_axi_rdata[15]} {design_ps_i/xadc_wiz_0/s_axi_rdata[16]} {design_ps_i/xadc_wiz_0/s_axi_rdata[17]} {design_ps_i/xadc_wiz_0/s_axi_rdata[18]} {design_ps_i/xadc_wiz_0/s_axi_rdata[19]} {design_ps_i/xadc_wiz_0/s_axi_rdata[20]} {design_ps_i/xadc_wiz_0/s_axi_rdata[21]} {design_ps_i/xadc_wiz_0/s_axi_rdata[22]} {design_ps_i/xadc_wiz_0/s_axi_rdata[23]} {design_ps_i/xadc_wiz_0/s_axi_rdata[24]} {design_ps_i/xadc_wiz_0/s_axi_rdata[25]} {design_ps_i/xadc_wiz_0/s_axi_rdata[26]} {design_ps_i/xadc_wiz_0/s_axi_rdata[27]} {design_ps_i/xadc_wiz_0/s_axi_rdata[28]} {design_ps_i/xadc_wiz_0/s_axi_rdata[29]} {design_ps_i/xadc_wiz_0/s_axi_rdata[30]} {design_ps_i/xadc_wiz_0/s_axi_rdata[31]}]]
+create_debug_core u_ila_1_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1_0]
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_1_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1_0]
+set_property port_width 1 [get_debug_ports u_ila_1_0/clk]
+connect_debug_port u_ila_1_0/clk [get_nets [list design_ps_i/clk_wiz_0/inst/clk_out1]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe0]
+set_property port_width 16 [get_debug_ports u_ila_1_0/probe0]
+connect_debug_port u_ila_1_0/probe0 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[0]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[1]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[2]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[3]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[4]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[5]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[6]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[7]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[8]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[9]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[10]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[11]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[12]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[13]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[14]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[15]}]]
+create_debug_core u_ila_2_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_2_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_2_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_2_0]
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_2_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_2_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_2_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_2_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_2_0]
+set_property port_width 1 [get_debug_ports u_ila_2_0/clk]
+connect_debug_port u_ila_2_0/clk [get_nets [list design_ps_i/processing_system7_0/inst/FCLK_CLK0]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2_0/probe0]
+set_property port_width 16 [get_debug_ports u_ila_2_0/probe0]
+connect_debug_port u_ila_2_0/probe0 [get_nets [list {design_ps_i/DataGen_3ch_0/adjusted_value[0]} {design_ps_i/DataGen_3ch_0/adjusted_value[1]} {design_ps_i/DataGen_3ch_0/adjusted_value[2]} {design_ps_i/DataGen_3ch_0/adjusted_value[3]} {design_ps_i/DataGen_3ch_0/adjusted_value[4]} {design_ps_i/DataGen_3ch_0/adjusted_value[5]} {design_ps_i/DataGen_3ch_0/adjusted_value[6]} {design_ps_i/DataGen_3ch_0/adjusted_value[7]} {design_ps_i/DataGen_3ch_0/adjusted_value[8]} {design_ps_i/DataGen_3ch_0/adjusted_value[9]} {design_ps_i/DataGen_3ch_0/adjusted_value[10]} {design_ps_i/DataGen_3ch_0/adjusted_value[11]} {design_ps_i/DataGen_3ch_0/adjusted_value[12]} {design_ps_i/DataGen_3ch_0/adjusted_value[13]} {design_ps_i/DataGen_3ch_0/adjusted_value[14]} {design_ps_i/DataGen_3ch_0/adjusted_value[15]}]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe1]
+set_property port_width 16 [get_debug_ports u_ila_1_0/probe1]
+connect_debug_port u_ila_1_0/probe1 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[0]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[1]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[2]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[3]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[4]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[5]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[6]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[7]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[8]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[9]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[10]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[11]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[12]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[13]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[14]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch1/hf_sig[15]}]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe2]
+set_property port_width 4 [get_debug_ports u_ila_1_0/probe2]
+connect_debug_port u_ila_1_0/probe2 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/sw_ch_out[0]} {design_ps_i/DataGen_3ch_0/inst/sw_ch_out[1]} {design_ps_i/DataGen_3ch_0/inst/sw_ch_out[2]} {design_ps_i/DataGen_3ch_0/inst/sw_ch_out[3]}]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe3]
+set_property port_width 4 [get_debug_ports u_ila_1_0/probe3]
+connect_debug_port u_ila_1_0/probe3 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/sw_ch_state[0]} {design_ps_i/DataGen_3ch_0/inst/sw_ch_state[1]} {design_ps_i/DataGen_3ch_0/inst/sw_ch_state[2]} {design_ps_i/DataGen_3ch_0/inst/sw_ch_state[3]}]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe4]
+set_property port_width 16 [get_debug_ports u_ila_1_0/probe4]
+connect_debug_port u_ila_1_0/probe4 [get_nets [list {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[0]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[1]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[2]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[3]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[4]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[5]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[6]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[7]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[8]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[9]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[10]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[11]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[12]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[13]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[14]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[15]}]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe5]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe5]
+connect_debug_port u_ila_1_0/probe5 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch1_S_AXIS_start]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe6]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe6]
+connect_debug_port u_ila_1_0/probe6 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch1_S_AXIS_tlast]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe7]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe7]
+connect_debug_port u_ila_1_0/probe7 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch1_S_AXIS_tready]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe8]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe8]
+connect_debug_port u_ila_1_0/probe8 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch1_S_AXIS_tvalid]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe9]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe9]
+connect_debug_port u_ila_1_0/probe9 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch1_send_busy]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe10]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe10]
+connect_debug_port u_ila_1_0/probe10 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch1_send_busy_t]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe11]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe11]
+connect_debug_port u_ila_1_0/probe11 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch2_S_AXIS_start]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe12]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe12]
+connect_debug_port u_ila_1_0/probe12 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch2_S_AXIS_tlast]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe13]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe13]
+connect_debug_port u_ila_1_0/probe13 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch2_S_AXIS_tready]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe14]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe14]
+connect_debug_port u_ila_1_0/probe14 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch2_S_AXIS_tvalid]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe15]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe15]
+connect_debug_port u_ila_1_0/probe15 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch2_send_busy]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe16]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe16]
+connect_debug_port u_ila_1_0/probe16 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch2_send_busy_t]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe17]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe17]
+connect_debug_port u_ila_1_0/probe17 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch3_S_AXIS_start]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe18]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe18]
+connect_debug_port u_ila_1_0/probe18 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch3_S_AXIS_tlast]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe19]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe19]
+connect_debug_port u_ila_1_0/probe19 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch3_S_AXIS_tready]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe20]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe20]
+connect_debug_port u_ila_1_0/probe20 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch3_S_AXIS_tvalid]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe21]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe21]
+connect_debug_port u_ila_1_0/probe21 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch3_send_busy]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe22]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe22]
+connect_debug_port u_ila_1_0/probe22 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch3_send_busy_t]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe23]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe23]
+connect_debug_port u_ila_1_0/probe23 [get_nets [list design_ps_i/DataGen_3ch_0/clk]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe24]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe24]
+connect_debug_port u_ila_1_0/probe24 [get_nets [list design_ps_i/DataGen_3ch_0_hf_ch_send_flag]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe25]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe25]
+connect_debug_port u_ila_1_0/probe25 [get_nets [list design_ps_i/DataGen_3ch_0_S_AXIS_TLAST]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe26]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe26]
+connect_debug_port u_ila_1_0/probe26 [get_nets [list design_ps_i/DataGen_3ch_0_S_AXIS_TREADY]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe27]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe27]
+connect_debug_port u_ila_1_0/probe27 [get_nets [list design_ps_i/DataGen_3ch_0_S_AXIS_TVALID]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe28]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe28]
+connect_debug_port u_ila_1_0/probe28 [get_nets [list design_ps_i/DataGen_3ch_0/inst/hf_ch1_send_flag]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe29]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe29]
+connect_debug_port u_ila_1_0/probe29 [get_nets [list design_ps_i/DataGen_3ch_0/inst/hf_ch2_send_flag]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe30]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe30]
+connect_debug_port u_ila_1_0/probe30 [get_nets [list design_ps_i/DataGen_3ch_0/inst/hf_ch3_send_flag]]
+create_debug_port u_ila_1_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1_0/probe31]
+set_property port_width 1 [get_debug_ports u_ila_1_0/probe31]
+connect_debug_port u_ila_1_0/probe31 [get_nets [list design_ps_i/Timer_10us_m_0_timer_10us_o]]
+create_debug_port u_ila_2_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2_0/probe1]
+set_property port_width 16 [get_debug_ports u_ila_2_0/probe1]
+connect_debug_port u_ila_2_0/probe1 [get_nets [list {design_ps_i/DataGen_3ch_0/pretrig[0]} {design_ps_i/DataGen_3ch_0/pretrig[1]} {design_ps_i/DataGen_3ch_0/pretrig[2]} {design_ps_i/DataGen_3ch_0/pretrig[3]} {design_ps_i/DataGen_3ch_0/pretrig[4]} {design_ps_i/DataGen_3ch_0/pretrig[5]} {design_ps_i/DataGen_3ch_0/pretrig[6]} {design_ps_i/DataGen_3ch_0/pretrig[7]} {design_ps_i/DataGen_3ch_0/pretrig[8]} {design_ps_i/DataGen_3ch_0/pretrig[9]} {design_ps_i/DataGen_3ch_0/pretrig[10]} {design_ps_i/DataGen_3ch_0/pretrig[11]} {design_ps_i/DataGen_3ch_0/pretrig[12]} {design_ps_i/DataGen_3ch_0/pretrig[13]} {design_ps_i/DataGen_3ch_0/pretrig[14]} {design_ps_i/DataGen_3ch_0/pretrig[15]}]]
+create_debug_port u_ila_2_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2_0/probe2]
+set_property port_width 16 [get_debug_ports u_ila_2_0/probe2]
+connect_debug_port u_ila_2_0/probe2 [get_nets [list {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[0]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[1]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[2]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[3]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[4]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[5]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[6]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[7]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[8]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[9]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[10]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[11]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[12]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[13]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[14]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch1[15]}]]
+create_debug_port u_ila_2_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2_0/probe3]
+set_property port_width 16 [get_debug_ports u_ila_2_0/probe3]
+connect_debug_port u_ila_2_0/probe3 [get_nets [list {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[0]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[1]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[2]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[3]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[4]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[5]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[6]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[7]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[8]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[9]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[10]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[11]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[12]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[13]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[14]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch2[15]}]]
+create_debug_port u_ila_2_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2_0/probe4]
+set_property port_width 16 [get_debug_ports u_ila_2_0/probe4]
+connect_debug_port u_ila_2_0/probe4 [get_nets [list {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[0]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[1]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[2]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[3]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[4]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[5]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[6]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[7]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[8]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[9]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[10]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[11]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[12]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[13]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[14]} {design_ps_i/DataGen_3ch_0/trig_level_h_ch3[15]}]]
+create_debug_port u_ila_2_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2_0/probe5]
+set_property port_width 16 [get_debug_ports u_ila_2_0/probe5]
+connect_debug_port u_ila_2_0/probe5 [get_nets [list {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[0]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[1]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[2]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[3]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[4]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[5]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[6]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[7]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[8]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[9]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[10]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[11]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[12]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[13]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[14]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch1[15]}]]
+create_debug_port u_ila_2_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2_0/probe6]
+set_property port_width 16 [get_debug_ports u_ila_2_0/probe6]
+connect_debug_port u_ila_2_0/probe6 [get_nets [list {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[0]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[1]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[2]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[3]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[4]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[5]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[6]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[7]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[8]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[9]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[10]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[11]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[12]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[13]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[14]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch2[15]}]]
+create_debug_port u_ila_2_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2_0/probe7]
+set_property port_width 16 [get_debug_ports u_ila_2_0/probe7]
+connect_debug_port u_ila_2_0/probe7 [get_nets [list {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[0]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[1]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[2]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[3]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[4]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[5]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[6]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[7]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[8]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[9]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[10]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[11]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[12]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[13]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[14]} {design_ps_i/DataGen_3ch_0/trig_level_l_ch3[15]}]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets u_ila_0_clk_in1_design_ps_clk_wiz_0_0]

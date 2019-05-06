@@ -1,0 +1,341 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Dec 18 11:57:23 2017
+# Process ID: 5764
+# Current directory: F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2252 F:\Work\2017\ZGDL-2017-YF-012\cpu\YF-012-V1.1-FPGA_bk1218\YF-012-V1.0-FPGA\YF-012-V1.0-FPGA.xpr
+# Log file: F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/vivado.log
+# Journal file: F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.xpr
+open_bd_design {F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_13
+endgroup
+set_property location {10 3059 1537} [get_bd_cells axi_gpio_13]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_14
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_15
+endgroup
+startgroup
+set_property -dict [list CONFIG.NUM_MI {18}] [get_bd_cells processing_system7_0_axi_periph]
+endgroup
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M15_AXI] [get_bd_intf_pins axi_gpio_15/S_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M16_AXI] [get_bd_intf_pins axi_gpio_14/S_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M17_AXI] [get_bd_intf_pins axi_gpio_13/S_AXI]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M17_AXI]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M15_AXI]
+connect_bd_intf_net [get_bd_intf_pins axi_gpio_15/S_AXI] -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M17_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M15_AXI] [get_bd_intf_pins axi_gpio_13/S_AXI]
+connect_bd_net [get_bd_pins processing_system7_0_axi_periph/M15_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins processing_system7_0_axi_periph/M16_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins processing_system7_0_axi_periph/M17_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins processing_system7_0_axi_periph/M15_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins processing_system7_0_axi_periph/M16_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins processing_system7_0_axi_periph/M17_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+startgroup
+connect_bd_net [get_bd_pins axi_gpio_15/s_axi_aclk] [get_bd_pins axi_gpio_14/s_axi_aclk]
+endgroup
+connect_bd_net [get_bd_pins axi_gpio_14/s_axi_aclk] [get_bd_pins axi_gpio_13/s_axi_aclk]
+undo
+connect_bd_net [get_bd_pins axi_gpio_15/s_axi_aresetn] [get_bd_pins axi_gpio_11/s_axi_aresetn]
+connect_bd_net [get_bd_pins axi_gpio_13/s_axi_aresetn] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_gpio_14/s_axi_aresetn] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axi_gpio_14/s_axi_aclk] [get_bd_pins axi_gpio_13/s_axi_aclk]
+delete_bd_objs [get_bd_nets Net]
+connect_bd_net [get_bd_pins axi_gpio_13/s_axi_aclk] [get_bd_pins axi_gpio_11/s_axi_aclk]
+connect_bd_net [get_bd_pins axi_gpio_14/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins axi_gpio_15/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+startgroup
+set_property -dict [list CONFIG.C_GPIO_WIDTH {1}] [get_bd_cells axi_gpio_15]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_ALL_OUTPUTS {1}] [get_bd_cells axi_gpio_15]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_GPIO_WIDTH {1} CONFIG.C_ALL_OUTPUTS {1}] [get_bd_cells axi_gpio_14]
+endgroup
+startgroup
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_GPIO_WIDTH {1} CONFIG.C_ALL_OUTPUTS {1}] [get_bd_cells axi_gpio_13]
+endgroup
+startgroup
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 GPIO
+connect_bd_intf_net [get_bd_intf_pins axi_gpio_14/GPIO] [get_bd_intf_ports GPIO]
+endgroup
+startgroup
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 GPIO_1
+connect_bd_intf_net [get_bd_intf_pins axi_gpio_15/GPIO] [get_bd_intf_ports GPIO_1]
+endgroup
+startgroup
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 GPIO_2
+connect_bd_intf_net [get_bd_intf_pins axi_gpio_13/GPIO] [get_bd_intf_ports GPIO_2]
+endgroup
+set_property name CH_EN1 [get_bd_intf_ports GPIO_2]
+set_property name CH_EN2 [get_bd_intf_ports GPIO]
+set_property name CH_EN3 [get_bd_intf_ports GPIO_1]
+regenerate_bd_layout
+save_bd_design
+open_bd_design {F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd}
+validate_bd_design
+reset_target all [get_files  F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd]
+export_ip_user_files -of_objects  [get_files  F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd] -sync -no_script -force -quiet
+generate_target all [get_files  F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd]
+export_ip_user_files -of_objects [get_files F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd] -directory F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.ip_user_files/sim_scripts -force -quiet
+assign_bd_address [get_bd_addr_segs {axi_gpio_13/S_AXI/Reg }]
+assign_bd_address [get_bd_addr_segs {axi_gpio_15/S_AXI/Reg }]
+assign_bd_address [get_bd_addr_segs {axi_gpio_14/S_AXI/Reg }]
+validate_bd_design
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*CH_EN*" } ]
+delete_debug_core [get_debug_cores {u_ila_0_0 u_ila_1_0 u_ila_2_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+create_debug_core u_ila_1 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
+create_debug_core u_ila_2 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_2]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_2]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_2]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_2]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_2]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_2]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_2]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_2]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list design_ps_i/clk_wiz_0/inst/clk_in1_design_ps_clk_wiz_0_0 ]]
+set_property port_width 1 [get_debug_ports u_ila_1/clk]
+connect_debug_port u_ila_1/clk [get_nets [list design_ps_i/clk_wiz_0/inst/clk_out1 ]]
+set_property port_width 1 [get_debug_ports u_ila_2/clk]
+connect_debug_port u_ila_2/clk [get_nets [list design_ps_i/processing_system7_0/inst/FCLK_CLK0 ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {design_ps_i/xadc_wiz_0/s_axi_rdata[0]} {design_ps_i/xadc_wiz_0/s_axi_rdata[1]} {design_ps_i/xadc_wiz_0/s_axi_rdata[2]} {design_ps_i/xadc_wiz_0/s_axi_rdata[3]} {design_ps_i/xadc_wiz_0/s_axi_rdata[4]} {design_ps_i/xadc_wiz_0/s_axi_rdata[5]} {design_ps_i/xadc_wiz_0/s_axi_rdata[6]} {design_ps_i/xadc_wiz_0/s_axi_rdata[7]} {design_ps_i/xadc_wiz_0/s_axi_rdata[8]} {design_ps_i/xadc_wiz_0/s_axi_rdata[9]} {design_ps_i/xadc_wiz_0/s_axi_rdata[10]} {design_ps_i/xadc_wiz_0/s_axi_rdata[11]} {design_ps_i/xadc_wiz_0/s_axi_rdata[12]} {design_ps_i/xadc_wiz_0/s_axi_rdata[13]} {design_ps_i/xadc_wiz_0/s_axi_rdata[14]} {design_ps_i/xadc_wiz_0/s_axi_rdata[15]} {design_ps_i/xadc_wiz_0/s_axi_rdata[16]} {design_ps_i/xadc_wiz_0/s_axi_rdata[17]} {design_ps_i/xadc_wiz_0/s_axi_rdata[18]} {design_ps_i/xadc_wiz_0/s_axi_rdata[19]} {design_ps_i/xadc_wiz_0/s_axi_rdata[20]} {design_ps_i/xadc_wiz_0/s_axi_rdata[21]} {design_ps_i/xadc_wiz_0/s_axi_rdata[22]} {design_ps_i/xadc_wiz_0/s_axi_rdata[23]} {design_ps_i/xadc_wiz_0/s_axi_rdata[24]} {design_ps_i/xadc_wiz_0/s_axi_rdata[25]} {design_ps_i/xadc_wiz_0/s_axi_rdata[26]} {design_ps_i/xadc_wiz_0/s_axi_rdata[27]} {design_ps_i/xadc_wiz_0/s_axi_rdata[28]} {design_ps_i/xadc_wiz_0/s_axi_rdata[29]} {design_ps_i/xadc_wiz_0/s_axi_rdata[30]} {design_ps_i/xadc_wiz_0/s_axi_rdata[31]} ]]
+set_property port_width 16 [get_debug_ports u_ila_1/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[0]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[1]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[2]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[3]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[4]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[5]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[6]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[7]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[8]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[9]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[10]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[11]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[12]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[13]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[14]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pretrig_bk[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe1]
+connect_debug_port u_ila_1/probe1 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[0]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[1]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[2]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[3]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[4]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[5]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[6]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[7]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[8]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[9]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[10]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[11]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[12]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[13]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[14]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/pre_fifo_num[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe2]
+connect_debug_port u_ila_1/probe2 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[0]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[1]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[2]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[3]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[4]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[5]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[6]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[7]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[8]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[9]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[10]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[11]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[12]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[13]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[14]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/mfifo_din[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe3]
+connect_debug_port u_ila_1/probe3 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[0]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[1]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[2]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[3]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[4]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[5]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[6]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[7]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[8]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[9]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[10]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[11]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[12]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[13]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[14]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_sig[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 4 [get_debug_ports u_ila_1/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe4]
+connect_debug_port u_ila_1/probe4 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_ch_sample_state[0]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_ch_sample_state[1]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_ch_sample_state[2]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/hf_ch_sample_state[3]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 4 [get_debug_ports u_ila_1/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe5]
+connect_debug_port u_ila_1/probe5 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/sw_ch_out[0]} {design_ps_i/DataGen_3ch_0/inst/sw_ch_out[1]} {design_ps_i/DataGen_3ch_0/inst/sw_ch_out[2]} {design_ps_i/DataGen_3ch_0/inst/sw_ch_out[3]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 4 [get_debug_ports u_ila_1/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe6]
+connect_debug_port u_ila_1/probe6 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/sw_ch_state[0]} {design_ps_i/DataGen_3ch_0/inst/sw_ch_state[1]} {design_ps_i/DataGen_3ch_0/inst/sw_ch_state[2]} {design_ps_i/DataGen_3ch_0/inst/sw_ch_state[3]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe7]
+connect_debug_port u_ila_1/probe7 [get_nets [list {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[0]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[1]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[2]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[3]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[4]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[5]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[6]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[7]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[8]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[9]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[10]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[11]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[12]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[13]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[14]} {design_ps_i/DataGen_3ch_0_S_AXIS_TDATA[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe8]
+connect_debug_port u_ila_1/probe8 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch1_S_AXIS_start ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe9]
+connect_debug_port u_ila_1/probe9 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch1_S_AXIS_tlast ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe10]
+connect_debug_port u_ila_1/probe10 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch1_S_AXIS_tready ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe11]
+connect_debug_port u_ila_1/probe11 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch1_S_AXIS_tvalid ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe12]
+connect_debug_port u_ila_1/probe12 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch1_send_busy ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe13]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe13]
+connect_debug_port u_ila_1/probe13 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch1_send_busy_t ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe14]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe14]
+connect_debug_port u_ila_1/probe14 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch2_S_AXIS_start ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe15]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe15]
+connect_debug_port u_ila_1/probe15 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch2_S_AXIS_tlast ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe16]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe16]
+connect_debug_port u_ila_1/probe16 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch2_S_AXIS_tready ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe17]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe17]
+connect_debug_port u_ila_1/probe17 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch2_S_AXIS_tvalid ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe18]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe18]
+connect_debug_port u_ila_1/probe18 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch2_send_busy ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe19]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe19]
+connect_debug_port u_ila_1/probe19 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch2_send_busy_t ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe20]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe20]
+connect_debug_port u_ila_1/probe20 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch3_S_AXIS_start ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe21]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe21]
+connect_debug_port u_ila_1/probe21 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch3_S_AXIS_tlast ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe22]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe22]
+connect_debug_port u_ila_1/probe22 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch3_S_AXIS_tready ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe23]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe23]
+connect_debug_port u_ila_1/probe23 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch3_S_AXIS_tvalid ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe24]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe24]
+connect_debug_port u_ila_1/probe24 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch3_send_busy ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe25]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe25]
+connect_debug_port u_ila_1/probe25 [get_nets [list design_ps_i/DataGen_3ch_0/inst/ch3_send_busy_t ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe26]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe26]
+connect_debug_port u_ila_1/probe26 [get_nets [list design_ps_i/DataGen_3ch_0/clk ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe27]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe27]
+connect_debug_port u_ila_1/probe27 [get_nets [list design_ps_i/DataGen_3ch_0_hf_ch_send_flag ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe28]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe28]
+connect_debug_port u_ila_1/probe28 [get_nets [list design_ps_i/DataGen_3ch_0_S_AXIS_TLAST ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe29]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe29]
+connect_debug_port u_ila_1/probe29 [get_nets [list design_ps_i/DataGen_3ch_0_S_AXIS_TREADY ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe30]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe30]
+connect_debug_port u_ila_1/probe30 [get_nets [list design_ps_i/DataGen_3ch_0_S_AXIS_TVALID ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe31]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe31]
+connect_debug_port u_ila_1/probe31 [get_nets [list design_ps_i/DataGen_3ch_0/inst/hf_ch1_send_flag ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe32]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe32]
+connect_debug_port u_ila_1/probe32 [get_nets [list design_ps_i/DataGen_3ch_0/inst/hf_ch2_send_flag ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe33]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe33]
+connect_debug_port u_ila_1/probe33 [get_nets [list design_ps_i/DataGen_3ch_0/inst/hf_ch3_send_flag ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe34]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe34]
+connect_debug_port u_ila_1/probe34 [get_nets [list design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/prififo_rd_en ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe35]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe35]
+connect_debug_port u_ila_1/probe35 [get_nets [list design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/prififo_wr_en ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe36]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe36]
+connect_debug_port u_ila_1/probe36 [get_nets [list design_ps_i/Timer_10us_m_0_timer_10us_o ]]
+set_property port_width 16 [get_debug_ports u_ila_2/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe0]
+connect_debug_port u_ila_2/probe0 [get_nets [list {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[0]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[1]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[2]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[3]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[4]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[5]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[6]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[7]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[8]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[9]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[10]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[11]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[12]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[13]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[14]} {design_ps_i/DataGen_3ch_0/inst/hf_sig_ch3/trig_level[15]} ]]
+create_debug_port u_ila_2 probe
+set_property port_width 16 [get_debug_ports u_ila_2/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe1]
+connect_debug_port u_ila_2/probe1 [get_nets [list {design_ps_i/DataGen_3ch_0/pretrig[0]} {design_ps_i/DataGen_3ch_0/pretrig[1]} {design_ps_i/DataGen_3ch_0/pretrig[2]} {design_ps_i/DataGen_3ch_0/pretrig[3]} {design_ps_i/DataGen_3ch_0/pretrig[4]} {design_ps_i/DataGen_3ch_0/pretrig[5]} {design_ps_i/DataGen_3ch_0/pretrig[6]} {design_ps_i/DataGen_3ch_0/pretrig[7]} {design_ps_i/DataGen_3ch_0/pretrig[8]} {design_ps_i/DataGen_3ch_0/pretrig[9]} {design_ps_i/DataGen_3ch_0/pretrig[10]} {design_ps_i/DataGen_3ch_0/pretrig[11]} {design_ps_i/DataGen_3ch_0/pretrig[12]} {design_ps_i/DataGen_3ch_0/pretrig[13]} {design_ps_i/DataGen_3ch_0/pretrig[14]} {design_ps_i/DataGen_3ch_0/pretrig[15]} ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe2]
+connect_debug_port u_ila_2/probe2 [get_nets [list {design_ps_i/CH_EN1_tri_o[0]} ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe3]
+connect_debug_port u_ila_2/probe3 [get_nets [list {design_ps_i/CH_EN2_tri_o[0]} ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe4]
+connect_debug_port u_ila_2/probe4 [get_nets [list {design_ps_i/CH_EN3_tri_o[0]} ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe5]
+connect_debug_port u_ila_2/probe5 [get_nets [list design_ps_i/DataGen_3ch_0/DataGen_ready ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+validate_bd_design -force
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+validate_bd_design -force
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+delete_bd_objs [get_bd_addr_segs processing_system7_0/Data/SEG_axi_gpio_13_Reg]
+assign_bd_address
+exclude_bd_addr_seg [get_bd_addr_segs processing_system7_0/Data/SEG_axi_gpio_15_Reg]
+undo
+include_bd_addr_seg [get_bd_addr_segs -excluded processing_system7_0/Data/SEG_axi_gpio_15_Reg]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+reset_target all [get_files  F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd]
+export_ip_user_files -of_objects  [get_files  F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd] -sync -no_script -force -quiet
+generate_target all [get_files  F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd]
+export_ip_user_files -of_objects [get_files F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd] -no_script -force -quiet
+export_simulation -of_objects [get_files F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd] -directory F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.ip_user_files/sim_scripts -force -quiet
+make_wrapper -files [get_files F:/Work/2017/ZGDL-2017-YF-012/cpu/YF-012-V1.1-FPGA_bk1218/YF-012-V1.0-FPGA/YF-012-V1.0-FPGA.srcs/sources_1/bd/design_ps/design_ps.bd] -top
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+refresh_design
+refresh_design

@@ -1,0 +1,25 @@
+/*
+ * xqspips_flash.h
+ *
+ *  Created on: 2018Äê2ÔÂ8ÈÕ
+ *      Author: Administrator
+ */
+
+#ifndef XQSPIPS_FLASH_H_
+#define XQSPIPS_FLASH_H_
+
+#include "xparameters.h"	/* SDK generated parameters */
+#include "xqspips.h"		/* QSPI device driver */
+#include "xil_printf.h"
+
+#define QSPI_DEVICE_ID		XPAR_XQSPIPS_0_DEVICE_ID
+/*
+ * Flash address to which data is ot be written.
+ */
+#define TEST_ADDRESS		0x01FF0000   //last sector (size : 64kb)
+
+extern int qspi_init(u16 QspiDeviceId);
+extern u32 qspi_read(u32 Address);
+extern void qspi_write(u32 Address,u32 content);
+
+#endif /* XQSPIPS_FLASH_H_ */

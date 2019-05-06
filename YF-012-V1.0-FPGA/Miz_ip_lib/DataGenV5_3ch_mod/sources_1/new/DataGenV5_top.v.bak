@@ -1,0 +1,120 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2017/09/29 11:47:00
+// Design Name: 
+// Module Name: DataGenV5_top
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module DataGenV5_top(
+    input clk,
+    input btn,
+    input rst
+    );
+
+reg [15:0] pulse_period =16'd2000;         //产生的脉冲信号周期
+reg [15:0] pulse_offset =16'd100;          //产生的脉冲信号偏移相位
+reg [15:0] pulse_width =16'd100;           //产生的脉冲信号宽度 
+reg [31:0] dds_config_data=32'h0199999A; 
+reg [15:0] trig_level =16'd1000;         //产生的脉冲信号周期
+reg [15:0] pretrig =16'd100;          //产生的脉冲信号偏移相位
+reg [15:0] trig_length =16'd1000;           //产生的脉冲信号宽度  
+reg src_sel=1'b0;
+
+wire [15:0] hf_ch1,hf_ch2,hf_ch3;
+
+
+//产生模拟状态
+reg btn_t,DataGen_ready_sta;
+(* keep="true" *) reg DataGen_ready_i;
+always @(posedge clk)
+    if (!rst) begin
+       DataGen_ready_i<=0;       
+    end else begin
+       btn_t<=btn;
+       if ((btn_t==1)&&(btn==0))
+       		DataGen_ready_sta<=~DataGen_ready_sta;
+       else
+       		DataGen_ready_sta<=DataGen_ready_sta;
+    	 if (DataGen_ready_sta==1)
+    	 		DataGen_ready_i<=1'b1;
+    	 else
+    	 		DataGen_ready_i<=1'b0;
+       
+//       hf_ch_sim_cnt<=hf_ch_sim_cnt+1;
+    end
+(* keep="true" *) wire hf_ch_send_flag;
+
+(* keep="true" *) wire [15:0] S_AXIS_tdata;
+(* keep="true" *) wire S_AXIS_tvalid;
+(* keep="true" *) wire S_AXIS_tlast;
+
+//ila
+//wire [31:0] hs_probe0,hs_probe1,hs_probe2,hs_probe3,hs_probe4;
+//ila_0 mila_1 (
+//	.clk(rd_clk1), // input wire clk
+//	.probe0(hs_probe0), // input wire [31:0]  probe0
+//	.probe1(hs_probe1), // input wire [31:0]  probe1
+//	.probe2(hs_probe2), // input wire [31:0]  probe2
+//	.probe3(hs_probe3), // input wire [31:0]  probe3
+//	.probe4(hs_probe4) // input wire [31:0]  probe4
+//);
+//assign hs_probe0[15:0]=S_AXIS_tdata;
+//assign hs_probe0[16]=S_AXIS_tvalid;
+//assign hs_probe0[17]=S_AXIS_tlast;
+//assign hs_probe0[18]=hf_ch_send_flag;
+//assign hs_probe0[19]=DataGen_ready_i;
+//
+//assign hs_probe0[31:20]=32'd0;
+//
+//assign hs_probe1[31:0]=32'd0;
+//assign hs_probe2[31:0]=32'd0;
+//assign hs_probe3[31:0]=32'd0;
+//assign hs_probe4[31:0]=32'd0;   
+
+wire rd_clk1;     
+DataGen_3ch mDataGen_3ch(
+    .clk(clk),
+    .rst(rst),
+
+    .hf_ch1(hf_ch1),
+    .hf_ch2(hf_ch2),
+    .hf_ch3(hf_ch3),
+
+    .trig_level(trig_level),
+    .pretrig(pretrig),
+    .trig_length(trig_length),
+
+    .dds_config_data(dds_config_data),
+    .pulse_period(pulse_period),
+    .pulse_offset(pulse_offset),
+    .pulse_width(pulse_width),
+
+    .src_sel(src_sel),
+    .DataGen_ready(DataGen_ready_i),		//1 表示参数配置完毕 可以开始采集
+
+    .hf_ch_send_flag(hf_ch_send_flag),
+    .S_AXIS_start(1'b1),
+    .S_AXIS_aclk(rd_clk1),
+    .S_AXIS_aresetn(),
+    .S_AXIS_tready(1'b1),
+    .S_AXIS_tdata(S_AXIS_tdata),
+    .S_AXIS_tvalid(S_AXIS_tvalid),
+    .S_AXIS_tlast(S_AXIS_tlast)
+
+    );   
+endmodule
